@@ -1,3 +1,30 @@
+$primary-color: #FF3811;
+$text-primary: #151515;
+$text-secondary: #737373;
+
 .navbar{
-    
+    max-width: 1440px;
+    padding: 0 9.375rem;
+    margin: 1rem auto;    
+
+    .btn-outline{
+        border: 1.5px solid $primary-color ;
+        color: $primary-color;
+        cursor: pointer;
+
+        &:hover{
+            color: #fff;
+            background-color: $primary-color;
+        }
+    }
+}
+
+.dropdown{
+    position: relative;
+}
+
+.menu-compact{
+    position: absolute;
+    top: 2.6rem !important;
+    right: -2.5rem;
 }

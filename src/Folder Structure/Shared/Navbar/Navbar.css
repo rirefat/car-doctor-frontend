@@ -1,1 +1,24 @@
-/*# sourceMappingURL=Navbar.css.map */
+.navbar {
+  max-width: 1440px;
+  padding: 0 9.375rem;
+  margin: 1rem auto;
+}
+.navbar .btn-outline {
+  border: 1.5px solid #FF3811;
+  color: #FF3811;
+  cursor: pointer;
+}
+.navbar .btn-outline:hover {
+  color: #fff;
+  background-color: #FF3811;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.menu-compact {
+  position: absolute;
+  top: 2.6rem !important;
+  right: -2.5rem;
+}/*# sourceMappingURL=Navbar.css.map */
