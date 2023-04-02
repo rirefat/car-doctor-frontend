@@ -1,11 +1,11 @@
 import React from 'react';
 
-const ks = () => {
+const App = () => {
   return (
     <div>
-      
+      <button className="btn">Button</button>
     </div>
   );
 };
 
-export default ks;
+export default App;
