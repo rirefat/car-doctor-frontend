@@ -3,6 +3,12 @@
   padding: 0 9.375rem;
   margin: 1rem auto;
 }
+.navbar .navbar-icon {
+  padding-right: 1.5rem;
+}
+.navbar .navbar-icon:hover {
+  color: #FF3811;
+}
 .navbar .btn-outline {
   border: 1.5px solid #FF3811;
   color: #FF3811;

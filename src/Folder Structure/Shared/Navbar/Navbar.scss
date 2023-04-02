@@ -5,7 +5,15 @@ $text-secondary: #737373;
 .navbar{
     max-width: 1440px;
     padding: 0 9.375rem;
-    margin: 1rem auto;    
+    margin: 1rem auto; 
+    
+    .navbar-icon{
+        padding-right: 1.5rem;
+
+        &:hover{
+            color: $primary-color;
+        }
+    }
 
     .btn-outline{
         border: 1.5px solid $primary-color ;

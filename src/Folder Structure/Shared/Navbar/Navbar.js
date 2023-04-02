@@ -2,6 +2,7 @@ import React from 'react';
 import './Navbar.css'
 import logo from '../../../assets/logo.svg';
 import { Link } from 'react-router-dom';
+import { BsHandbag,BsSearch } from 'react-icons/bs';
 
 const Navbar = () => {
     const navLinks = <>
@@ -30,6 +31,8 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
+                <Link className='navbar-icon' to={'/cart'}><BsHandbag></BsHandbag></Link>
+                <Link className='navbar-icon' to={'/search'}><BsSearch></BsSearch></Link>
                 <Link to={'/contact'}><button className="btn btn-outline shadow-md">Appointment</button></Link>
             </div>
             <div className="dropdown">
