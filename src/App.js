@@ -1,9 +1,9 @@
 import React from 'react';
+import './App.css'
 
 const App = () => {
   return (
-    <div>
-      <button className="btn">Button</button>
+    <div className='app'>
     </div>
   );
 };
