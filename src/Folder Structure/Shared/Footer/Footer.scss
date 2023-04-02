@@ -15,8 +15,9 @@ $text-2: #A2A2A2;
         div {
 
             // width: 283px;
-            .footer-text {
+            p {
                 width: 283px;
+                margin-top: 1.5rem !important;
                 // color: $text-2 !important;
                 font-weight: 500 !important;
             }
