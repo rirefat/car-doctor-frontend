@@ -1,0 +1,27 @@
+.footer-container {
+  background-color: black;
+}
+.footer-container .footer {
+  background-color: black;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 9rem 9.375rem;
+}
+.footer-container .footer div p {
+  width: 283px;
+  color: #E8E8E8;
+}
+.footer-container .footer div .footer_title {
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+.footer-container .footer div .link {
+  color: #737373;
+  transition: transform 0.5s;
+  padding-bottom: 0.5rem;
+}
+.footer-container .footer div .link:hover {
+  color: #FF3811 !important;
+  text-decoration: none;
+  transform: translateX(5px);
+}/*# sourceMappingURL=Footer.css.map */
