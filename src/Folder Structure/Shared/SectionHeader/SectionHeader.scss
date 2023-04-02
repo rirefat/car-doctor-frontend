@@ -1,0 +1,26 @@
+$primary-color: #FF3811;
+$text-primary: #151515;
+$text-secondary: #737373;
+$text-white: #fff;
+$text-2: #A2A2A2;
+$section-max-width: 1440px;
+$section-universal-padding: 9.375rem;
+$font-family-primary: Inter, sans-serif;
+
+.section-header{
+    h3{
+        color: $primary-color !important;
+    }
+
+    h2{
+        color: $text-primary;
+        line-height: 3.4rem;
+    }
+    p{
+        text-transform: capitalize;
+        color: $text-secondary;
+        font-weight: 400;
+        max-width: 45rem;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,14 @@
+.section-header h3 {
+  color: #FF3811 !important;
+}
+.section-header h2 {
+  color: #151515;
+  line-height: 3.4rem;
+}
+.section-header p {
+  text-transform: capitalize;
+  color: #737373;
+  font-weight: 400;
+  max-width: 45rem;
+  margin: 0 auto;
+}/*# sourceMappingURL=SectionHeader.css.map */

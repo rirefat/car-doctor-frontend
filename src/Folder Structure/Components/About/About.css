@@ -1,0 +1,26 @@
+.about {
+  max-width: 1440px;
+  padding: 0 9.375rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.about .about-right {
+  text-align: left !important;
+}
+.about .about-right .section-title {
+  width: 70% !important;
+}
+.about .about-right .description {
+  font-size: 1rem;
+  color: #737373;
+  line-height: 30px;
+  margin: 1.2rem 0;
+}
+.about .about-right .btn {
+  background-color: #FF3811;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.about .about-right .btn:hover {
+  background-color: #c71007;
+}/*# sourceMappingURL=About.css.map */
