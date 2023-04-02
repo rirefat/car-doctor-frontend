@@ -1,8 +1,25 @@
 .about {
   max-width: 1440px;
   padding: 0 9.375rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.about .about-left {
+  position: relative;
+}
+.about .about-left .mechanic-img {
+  border-radius: 10px;
+  width: 90%;
+}
+.about .about-left .parts-img {
+  border-radius: 10px;
+  width: 70%;
+  border: 0.5rem solid white;
+  position: absolute;
+  top: 60%;
+  right: 0;
 }
 .about .about-right {
   text-align: left !important;
@@ -23,4 +40,47 @@
 }
 .about .about-right .btn:hover {
   background-color: #c71007;
+}
+
+@media screen and (max-width: 1200px) {
+  .about {
+    gap: 2.5rem;
+  }
+  .about .about-left .parts-img {
+    border-radius: 10px;
+    width: 70%;
+    border: 0.5rem solid white;
+    position: absolute;
+    top: 50% !important;
+    right: 0;
+  }
+  .about .about-right .section-title {
+    width: 85% !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .about {
+    gap: 2.5rem;
+  }
+  .about .about-left .parts-img {
+    border-radius: 10px;
+    width: 70%;
+    border: 0.5rem solid white;
+    position: absolute;
+    top: 20%;
+    right: 0;
+  }
+  .about .about-right .section-title {
+    width: 92% !important;
+  }
+}
+@media screen and (max-width: 1065px) {
+  .about .about-right .section-title {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .about {
+    flex-direction: column-reverse;
+  }
 }/*# sourceMappingURL=About.css.map */
