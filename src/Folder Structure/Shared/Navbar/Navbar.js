@@ -6,11 +6,11 @@ import { BsHandbag,BsSearch } from 'react-icons/bs';
 
 const Navbar = () => {
     const navLinks = <>
-        <li><a href="/">Home</a></li>
-        <li><a href="/">About</a></li>
-        <li><a href="/">Services</a></li>
-        <li><a href="/">Blog</a></li>
-        <li><a href="/">Content</a></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/">About</Link></li>
+        <li><Link to="/">Services</Link></li>
+        <li><Link to="/">Blog</Link></li>
+        <li><Link to="/">Content</Link></li>
     </>
     return (
         <div className="navbar bg-base-100">
