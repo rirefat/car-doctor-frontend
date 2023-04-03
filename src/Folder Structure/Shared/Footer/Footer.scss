@@ -25,6 +25,28 @@ $btn-hover-bg:#c71007;
                 margin-top: 1.5rem !important;
                 font-weight: 500 !important;
             }
+
+            .social-links{
+                display: flex;
+                align-items: center;
+                margin-top: 1.5rem;
+                font-size: 1.3rem;
+                
+                a{
+                    // width: 2.2rem;
+                    color: $text-2;
+                    // height: 2.2rem;
+                    background-color: #2C2C2C;
+                    padding: 10px;
+                    margin-right: 0.75rem;
+                    border-radius: 50%;
+
+                    &:hover{
+                        background-color: #5a5959;
+                    }
+
+                }
+            }
             
 
             .footer_title {

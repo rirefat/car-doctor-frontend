@@ -2,6 +2,9 @@ import React from 'react';
 import './Footer.css';
 import logoFooter from '../../../assets/logo-light.png';
 import { Link } from 'react-router-dom';
+import { GrGoogle, GrLinkedinOption } from 'react-icons/gr';
+import { BsTwitter } from 'react-icons/bs';
+import { FaFacebookF } from 'react-icons/fa';
 
 const Footer = () => {
     return (
@@ -9,7 +12,13 @@ const Footer = () => {
             <footer className="footer p-10 text-base-content">
                 <div>
                     <Link to={'/'}><img src={logoFooter} alt="Logo" /></Link>
-                    <p className='text-lg text-slate-400 mt-6'>Edwin Diaz is a software and web technologies engineer, a life coach trainer who is also a serial .</p>                    
+                    <p className='text-lg text-slate-400 mt-6'>Edwin Diaz is a software and web technologies engineer, a life coach trainer who is also a serial .</p>
+                    <div className="social-links">
+                        <Link to={'/'}><GrGoogle></GrGoogle></Link>
+                        <Link to={'/'}><FaFacebookF></FaFacebookF></Link>
+                        <Link to={'/'}><BsTwitter></BsTwitter></Link>
+                        <Link to={'/'}><GrLinkedinOption></GrLinkedinOption></Link>
+                    </div>
                 </div>
                 <div>
                     <span className="footer_title text-lg font-semibold text-lg">About</span>
