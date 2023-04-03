@@ -27,9 +27,14 @@
 .core-features .features-container .feature:hover {
   transform: translateY(-1rem);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  background-color: #FF3811;
+  color: #fff;
 }
 .core-features .features-container .feature:nth-child(2) {
   background-color: #FF3811;
   color: #fff;
   border: #FF3811;
+}
+.core-features .features-container .feature:nth-child(2):hover {
+  background-color: #c71007;
 }/*# sourceMappingURL=CoreFeatures.css.map */
