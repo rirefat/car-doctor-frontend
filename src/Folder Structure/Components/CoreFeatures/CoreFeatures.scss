@@ -1,0 +1,28 @@
+$primary-color: #FF3811;
+$text-primary: #151515;
+$text-secondary: #737373;
+$text-white: #fff;
+$text-2: #A2A2A2;
+$section-max-width: 1440px;
+$section-universal-padding: 9.375rem;
+$font-family-primary: Inter, sans-serif;
+$btn-hover-bg:#c71007;
+
+.core-features{
+    max-width: $section-max-width;
+    margin: 0 auto;
+    padding: 0 $section-universal-padding;
+
+    .features-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .feature{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+}

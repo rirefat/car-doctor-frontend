@@ -1,0 +1,16 @@
+.core-features {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 9.375rem;
+}
+.core-features .features-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.core-features .features-container .feature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}/*# sourceMappingURL=CoreFeatures.css.map */
