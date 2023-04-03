@@ -1,5 +1,12 @@
 .service-details {
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 3rem auto;
   padding: 0 9.375rem;
+  position: relative;
+}
+.service-details .breadcrumb {
+  position: absolute;
+  color: #fff;
+  bottom: 3%;
+  left: 16%;
 }/*# sourceMappingURL=ServiceDetails.css.map */

@@ -6,4 +6,9 @@
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  padding-left: 5rem;
 }/*# sourceMappingURL=TopBanner.css.map */

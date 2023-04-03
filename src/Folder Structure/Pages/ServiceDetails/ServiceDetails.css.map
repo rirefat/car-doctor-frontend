@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["ServiceDetails.scss"],"names":[],"mappings":"AAWA;EACI,WAPgB;EAQhB;EACA","file":"ServiceDetails.css"}
+{"version":3,"sourceRoot":"","sources":["ServiceDetails.scss"],"names":[],"mappings":"AAWA;EACI,WAPgB;EAQhB;EACA;EACA;;AAEA;EACI;EACA,OAhBK;EAiBL;EACA","file":"ServiceDetails.css"}

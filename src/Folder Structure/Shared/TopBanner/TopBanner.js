@@ -1,10 +1,12 @@
 import React from 'react';
 import './TopBanner.css';
 
-const TopBanner = () => {
+const TopBanner = (props) => {
+    const {title, subtitle}=props;
     return (
         <div className='top-banner'>
-            <h2>Service Details</h2>
+            <h3 className="subtitle text-primary-color mb-3">{subtitle ? subtitle:'Subtitle'}</h3>
+            <h2 className="title text-4xl">{title ? title:'Title'}</h2>
         </div>
     );
 };
