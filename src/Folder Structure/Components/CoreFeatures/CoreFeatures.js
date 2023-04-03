@@ -25,11 +25,11 @@ const CoreFeatures = () => {
                 description={"the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."}
                 center={true}
             ></SectionHeader>
-            <div className="features-container">
+            <div className="features-container my-15">
                 {
                     coreFeatures.map(feature=><div key={feature.id} className='feature'>
-                        <img src={feature.icon} alt="feature icon" />
-                        <h4>{feature.title}</h4>
+                        <img src={feature.icon} alt="feature icon" className='mb-5'/>
+                        <h4 className='font-bold'>{feature.title}</h4>
                     </div>)
                 }
             </div>

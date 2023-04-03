@@ -7,10 +7,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 5rem 0;
 }
 .core-features .features-container .feature {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   flex-direction: column;
+  width: 170px;
+  height: 155px;
+  border: 1px solid #c8c8c8;
+  border-radius: 10px;
 }/*# sourceMappingURL=CoreFeatures.css.map */
