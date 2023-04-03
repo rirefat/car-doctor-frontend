@@ -3,7 +3,7 @@ import './ServiceDetails.css';
 import TopBanner from '../../Shared/TopBanner/TopBanner';
 import { Link } from 'react-router-dom';
 
-import { BsFiletypeDoc, BsFillCloudArrowDownFill } from 'react-icons/bs';
+import { BsFiletypeDoc, BsFillCloudArrowDownFill,BsArrowRight } from 'react-icons/bs';
 
 import serviceImg from '../../../assets/images/banner/3.jpg'
 import serviceImgFeature from '../../../assets/images/banner/2.jpg'
@@ -40,6 +40,15 @@ const ServiceDetails = () => {
         { id: 1, icon: step1, title: "STEP 1", desc: "It uses a dictionary of over 200." },
         { id: 2, icon: step2, title: "STEP 2", desc: "It uses a dictionary of over 200." },
         { id: 3, icon: step3, title: "STEP 3", desc: "It uses a dictionary of over 200." },
+    ];
+
+    const services =[
+        { id: 1, title: "Engine Repair"},
+        { id: 2, title: "Engine Repair"},
+        { id: 3, title: "Engine Repair"},
+        { id: 4, title: "Engine Repair"},
+        { id: 5, title: "Engine Repair"},
+        { id: 6, title: "Engine Repair"},
     ];
 
     return (
@@ -106,7 +115,14 @@ const ServiceDetails = () => {
                 </div>
 
                 <div className="right-section">
-                    <div className="mb-5 available-services"></div>
+                    <div className="mb-5 available-services p-10">
+                        <h4 className='text-xl text-black font-semibold mb-5'>Available Services</h4>
+                        {
+                            services.map(service=><div key={service.id} className='service'>
+                                <Link to={'#'}>{service.title}<span className="icon"><BsArrowRight></BsArrowRight></span></Link>                                
+                            </div>)
+                        }
+                    </div>
 
                     <div className="mb-5 download-documents bg-black p-10">
                         <h4 className='text-xl text-white'>Download</h4>

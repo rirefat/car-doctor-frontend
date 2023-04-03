@@ -63,6 +63,26 @@
   height: 83px !important;
   width: 83px !important;
 }
+.service-details .main-body .right-section .available-services {
+  background-color: #F3F3F3;
+  border-radius: 10px;
+}
+.service-details .main-body .right-section .available-services .service a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: transform 0.5s;
+}
+.service-details .main-body .right-section .available-services .service a:hover {
+  background-color: #FF3811;
+  color: #fff;
+  transform: translateX(10px);
+}
 .service-details .main-body .right-section .download-documents {
   border-radius: 10px;
 }
