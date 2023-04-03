@@ -12,7 +12,7 @@ const Footer = () => {
             <footer className="footer p-10 text-base-content">
                 <div>
                     <Link to={'/'}><img src={logoFooter} alt="Logo" /></Link>
-                    <p className='text-lg text-slate-400 mt-6'>Edwin Diaz is a software and web technologies engineer, a life coach trainer who is also a serial .</p>
+                    <p className='text-lg text-gray-400 mt-6'>Edwin Diaz is a software and web technologies engineer, a life coach trainer who is also a serial .</p>
                     <div className="social-links">
                         <Link to={'/'}><GrGoogle></GrGoogle></Link>
                         <Link to={'/'}><FaFacebookF></FaFacebookF></Link>
