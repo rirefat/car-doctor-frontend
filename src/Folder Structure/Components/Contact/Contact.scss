@@ -1,0 +1,40 @@
+$primary-color: #FF3811;
+$text-primary: #151515;
+$text-secondary: #737373;
+$text-white: #fff;
+$text-2: #A2A2A2;
+$section-max-width: 1440px;
+$section-universal-padding: 9.375rem;
+$font-family-primary: Inter, sans-serif;
+$btn-hover-bg:#c71007;
+
+.contact{
+    max-width: calc($section-max-width - $section-universal-padding * 1.5);
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: $text-primary;
+    margin-bottom: 5rem;
+    color: #fff;
+    padding: 6rem 4.5rem;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .contact-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        .title{
+            font-size: 1rem;
+            color: $text-2;
+        }
+
+        .desc{
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+    }
+}

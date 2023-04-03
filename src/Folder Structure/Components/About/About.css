@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   gap: 5rem;
+  margin-bottom: 8rem;
 }
 .about .about-left {
   position: relative;
