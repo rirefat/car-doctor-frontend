@@ -90,6 +90,26 @@ $border-basic: 1px solid #c8c8c8;
                 border-radius: 10px;
             }
 
+            .promotional-section{
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                position: relative;
+            }
+
+            .quote-btn{
+                background-color: $primary-color;
+                border: $primary-color;
+                position: absolute;
+                bottom: 30px;
+                left: 33%;
+
+                &:hover{
+                    background-color: $btn-hover-bg;
+                }
+            }
             .checkout-btn{
                 background-color: $primary-color;
                 border: $primary-color;

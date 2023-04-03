@@ -7,6 +7,7 @@ import { BsFiletypeDoc, BsFillCloudArrowDownFill } from 'react-icons/bs';
 
 import serviceImg from '../../../assets/images/banner/3.jpg'
 import serviceImgFeature from '../../../assets/images/banner/2.jpg'
+import logoLight from '../../../assets/logo-light-141.svg';
 import step1 from '../../../assets/icons/step-1.svg'
 import step2 from '../../../assets/icons/step-2.svg'
 import step3 from '../../../assets/icons/step-3.svg'
@@ -131,7 +132,16 @@ const ServiceDetails = () => {
                         </div>
                     </div>
 
-                    <div className="mb-5 promotional-section"></div>
+                    <div className="mb-5 promotional-section bg-black py-16">
+                        <img src={logoLight} alt="logo" className='logo mb-3' />
+                        <h3 className='text-white font-light'>Need Help? We Are Here To Help You</h3>
+
+                        <div className="offer-section bg-white px-10 pt-5 pb-10 rounded-xl mt-8">
+                            <h4 className='font-bold text-lg text-center mb-2'><span className='text-primary-color'>Car Doctor</span> Special</h4>
+                            <p className='text-sm text-center'>Save Upto <span className='text-primary-color'>60% Off</span></p>
+                        </div>
+                        <Link to={'/contact'}><button className="btn quote-btn shadow-md">Get A Quote</button></Link>
+                    </div>
 
                     <div className="mb-5 checkout">
                         <h3 className='text-3xl font-semibold mb-4'>Price: $250</h3>

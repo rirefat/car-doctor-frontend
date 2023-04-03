@@ -66,6 +66,24 @@
 .service-details .main-body .right-section .download-documents {
   border-radius: 10px;
 }
+.service-details .main-body .right-section .promotional-section {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.service-details .main-body .right-section .quote-btn {
+  background-color: #FF3811;
+  border: #FF3811;
+  position: absolute;
+  bottom: 30px;
+  left: 33%;
+}
+.service-details .main-body .right-section .quote-btn:hover {
+  background-color: #c71007;
+}
 .service-details .main-body .right-section .checkout-btn {
   background-color: #FF3811;
   border: #FF3811;
