@@ -18,7 +18,7 @@
   grid-template-columns: 2fr 1fr;
   gap: 2.5rem;
 }
-.service-details .main-body .left-section img {
+.service-details .main-body .left-section .feature-img {
   width: 100%;
   height: 400px;
   border-radius: 10px;
@@ -43,6 +43,25 @@
   justify-content: center;
   border-radius: 10px;
   border-top: 3px solid #FF3811;
+}
+.service-details .main-body .left-section .servicing-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.service-details .main-body .left-section .servicing-steps .servicing-step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #c8c8c8;
+  border-radius: 10px;
+  padding: 2rem;
+}
+.service-details .main-body .left-section .servicing-steps .servicing-step img {
+  height: 83px !important;
+  width: 83px !important;
 }
 @media screen and (max-width: 1220px) {
   .breadcrumb {

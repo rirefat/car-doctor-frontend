@@ -33,9 +33,9 @@ const ServiceDetails = () => {
     ];
 
     const serviceSteps = [
-        {id: 1, icon: step1, desc: "It uses a dictionary of over 200."}, 
-        {id: 2, icon: step2, desc: "It uses a dictionary of over 200."}, 
-        {id: 3, icon: step3, desc: "It uses a dictionary of over 200."}, 
+        {id: 1, icon: step1, title: "STEP 1", desc: "It uses a dictionary of over 200."}, 
+        {id: 2, icon: step2, title: "STEP 2", desc: "It uses a dictionary of over 200."}, 
+        {id: 3, icon: step3, title: "STEP 3", desc: "It uses a dictionary of over 200."}, 
     ];
 
     return (
@@ -71,7 +71,7 @@ const ServiceDetails = () => {
 
             <div className="main-body">
                 <div className="left-section">
-                    <img src={serviceImg} alt="Service Img" />
+                    <img src={serviceImg} alt="Service Img" className='feature-img'/>
                     <h2 className='service-title text-3xl font-semibold my-10'>Service Name</h2>
                     <p className='service-description text-base'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
 
@@ -89,10 +89,12 @@ const ServiceDetails = () => {
                     <h2 className='text-3xl font-semibold my-10'>3 Simple Steps to Process</h2>
                     <p className='service-description text-base'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
 
-                    <div className="servicing-steps">
+                    <div className="servicing-steps my-8">
                         {
-                            serviceSteps.map((step)=><div key={step.id} className='service-step'>
-                                
+                            serviceSteps.map((step)=><div key={step.id} className='servicing-step'>
+                                <img src={step.icon} alt="Service Step" />
+                                <h3 className='font-bold text-lg mb-5 text-center mt-4'>{step.title}</h3>
+                                <p className='text-secondary-text-color text-center'>{step.desc}</p>
                             </div>)
                         }
                     </div>
