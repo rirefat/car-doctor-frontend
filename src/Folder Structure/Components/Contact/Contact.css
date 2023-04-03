@@ -1,6 +1,8 @@
-.contact {
-  max-width: calc(1440px - 14.0625rem);
-  margin: 0 auto;
+.parent-container {
+  max-width: 1440px;
+  padding: 0 9.375rem;
+}
+.parent-container .contact {
   border-radius: 10px;
   background-color: #151515;
   margin-bottom: 5rem;
@@ -10,17 +12,17 @@
   justify-content: space-around;
   align-items: center;
 }
-.contact .contact-container {
+.parent-container .contact .contact-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
-.contact .contact-container .title {
-  font-size: 1rem;
+.parent-container .contact .contact-container .title {
+  font-size: 0.8rem;
   color: #A2A2A2;
 }
-.contact .contact-container .desc {
-  font-size: 1.5rem;
+.parent-container .contact .contact-container .desc {
+  font-size: 1.25rem;
   font-weight: 600;
 }/*# sourceMappingURL=Contact.css.map */

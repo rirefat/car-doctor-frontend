@@ -6,35 +6,42 @@ $text-2: #A2A2A2;
 $section-max-width: 1440px;
 $section-universal-padding: 9.375rem;
 $font-family-primary: Inter, sans-serif;
-$btn-hover-bg:#c71007;
+$btn-hover-bg: #c71007;
 
-.contact{
-    max-width: calc($section-max-width - $section-universal-padding * 1.5);
-    margin: 0 auto;
-    border-radius: 10px;
-    background-color: $text-primary;
-    margin-bottom: 5rem;
-    color: #fff;
-    padding: 6rem 4.5rem;
+.parent-container {
+    max-width: $section-max-width;
+    padding: 0 $section-universal-padding;
 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    .contact {
+        border-radius: 10px;
+        background-color: $text-primary;
+        margin-bottom: 5rem;
+        color: #fff;
+        padding: 6rem 4.5rem;
 
-    .contact-container{
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
-        gap: 1rem;
 
-        .title{
-            font-size: 1rem;
-            color: $text-2;
-        }
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
 
-        .desc{
-            font-size: 1.5rem;
-            font-weight: 600;
+            .title {
+                font-size: 0.8rem;
+                color: $text-2;
+            }
+
+            .desc {
+                font-size: 1.25rem;
+                font-weight: 600;
+            }
         }
     }
+}
+
+@media screen and (max-width: 1265px) {
+    
 }
