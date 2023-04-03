@@ -31,6 +31,19 @@ $btn-hover-bg:#c71007;
             height: 155px;
             border: 1px solid #c8c8c8;
             border-radius: 10px;
-        }
+            cursor: pointer;
+            transition: 0.5s;
+
+            &:hover{
+                transform: translateY(-1rem);
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+            }
+
+            &:nth-child(2){
+                background-color: $primary-color;
+                color: $text-white;
+                border: $primary-color;
+            }
+        }        
     }
 }
