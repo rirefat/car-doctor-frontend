@@ -28,7 +28,7 @@ const Footer = () => {
                 </div>
                 <div>
                     <span className="footer_title text-lg font-semibold text-lg">Company</span>
-                    <Link to={'/why-car-doctor'} className="link link-hover text-base">Why Car Doctor</Link>
+                    <Link to={'/core-features'} className="link link-hover text-base">Why Car Doctor</Link>
                     <Link to={'/about'} className="link link-hover text-base">About</Link>
                 </div>
                 <div>
