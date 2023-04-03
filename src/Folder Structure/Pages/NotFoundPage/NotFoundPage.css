@@ -1,1 +1,13 @@
-/*# sourceMappingURL=NotFoundPage.css.map */
+.not-found-page .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.not-found-page .container img {
+  width: 40%;
+  margin-bottom: 5rem;
+}
+.not-found-page h4 {
+  letter-spacing: 0.25rem;
+}/*# sourceMappingURL=NotFoundPage.css.map */

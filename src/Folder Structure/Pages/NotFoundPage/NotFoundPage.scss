@@ -1,0 +1,17 @@
+.not-found-page{
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        img{
+            width: 40%;
+            margin-bottom: 5rem;
+        }
+    }
+
+    h4{
+        letter-spacing: 0.25rem;
+    }
+}
