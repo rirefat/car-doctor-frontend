@@ -1,0 +1,17 @@
+.checkout-page {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 9.375rem;
+}
+.checkout-page .checkout-form {
+  background-color: #F3F3F3;
+  padding: 6rem;
+  border-radius: 10px;
+}
+.checkout-page .checkout-form .checkout-form-btn {
+  background-color: #FF3811;
+  border: none;
+}
+.checkout-page .checkout-form .checkout-form-btn:hover {
+  background-color: #c71007;
+}/*# sourceMappingURL=CheckOut.css.map */

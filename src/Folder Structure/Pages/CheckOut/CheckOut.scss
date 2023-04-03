@@ -1,0 +1,31 @@
+$primary-color: #FF3811;
+$text-primary: #151515;
+$text-secondary: #737373;
+$text-white: #fff;
+$text-2: #A2A2A2;
+$section-max-width: 1440px;
+$section-universal-padding: 9.375rem;
+$font-family-primary: Inter, sans-serif;
+$btn-hover-bg:#c71007;
+$border-basic: 1px solid #c8c8c8;
+
+.checkout-page{
+    max-width: $section-max-width;
+    margin: 0 auto;
+    padding: 0 $section-universal-padding;
+
+    .checkout-form{
+        background-color: #F3F3F3;
+        padding: 6rem;
+        border-radius: 10px;
+
+        .checkout-form-btn{
+            background-color: $primary-color;
+            border: none;
+
+            &:hover{
+                background-color: $btn-hover-bg;
+            }
+        }
+    }
+}
