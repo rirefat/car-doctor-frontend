@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["Footer.scss"],"names":[],"mappings":"AAMA;EACI;;AAEA;EACI;EACA;EACA;EACA;;AAKI;EACI;EACA,OAhBP;;AAmBG;EACI,OArBH;EAsBG;;AAGJ;EACI,OA3BC;EA4BD;EACA;;AAEA;EACI;EACA;EACA","file":"Footer.css"}
+{"version":3,"sourceRoot":"","sources":["Footer.scss"],"names":[],"mappings":"AAUA;EACI;;AAEA;EACI;EACA;EACA;EACA;;AAKI;EACI;EACA;EACA;;AAIJ;EACI,OA3BH;EA4BG;;AAGJ;EACI,OA/BP;EAgCO;EACA;EACA;;AAEA;EACI;EACA;EACA;;AAKhB;EACI;EACA;EACA;;AACC;EACG,OAlDC;;AAmDD;EACI,OAvDA","file":"Footer.css"}

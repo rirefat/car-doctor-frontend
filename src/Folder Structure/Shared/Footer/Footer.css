@@ -5,23 +5,36 @@
   background-color: black;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 9rem 9.375rem;
+  padding: 6rem 9.375rem;
 }
 .footer-container .footer div p {
-  width: 283px;
-  color: #E8E8E8;
+  width: 300px;
+  margin-top: 1.5rem !important;
+  font-weight: 500 !important;
 }
 .footer-container .footer div .footer_title {
   color: #fff;
   margin-bottom: 1.5rem;
 }
 .footer-container .footer div .link {
-  color: #737373;
+  color: #efefef;
   transition: transform 0.5s;
   padding-bottom: 0.5rem;
+  font-size: 1.1rem !important;
 }
 .footer-container .footer div .link:hover {
   color: #FF3811 !important;
   text-decoration: none;
   transform: translateX(5px);
+}
+.footer-container .developer-sign {
+  font-size: 0.8rem;
+  color: #b0b0b0;
+  padding-bottom: 1.5rem;
+}
+.footer-container .developer-sign a {
+  color: #fff;
+}
+.footer-container .developer-sign a:hover {
+  color: #FF3811;
 }/*# sourceMappingURL=Footer.css.map */

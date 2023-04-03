@@ -1,7 +1,12 @@
+$primary-color: #FF3811;
 $text-primary: #151515;
 $text-secondary: #737373;
 $text-white: #fff;
-$text-2: #A2A2A2;
+$text-2: #efefef;
+$section-max-width: 1440px;
+$section-universal-padding: 9.375rem;
+$font-family-primary: Inter, sans-serif;
+$btn-hover-bg:#c71007;
 
 .footer-container {
     background-color: black;
@@ -10,17 +15,17 @@ $text-2: #A2A2A2;
         background-color: black;
         max-width: 1440px;
         margin: 0 auto;
-        padding: 9rem 9.375rem;
+        padding: 6rem 9.375rem;
 
         div {
 
             // width: 283px;
             p {
-                width: 283px;
+                width: 300px;
                 margin-top: 1.5rem !important;
-                // color: $text-2 !important;
                 font-weight: 500 !important;
             }
+            
 
             .footer_title {
                 color: $text-white;
@@ -31,7 +36,7 @@ $text-2: #A2A2A2;
                 color: $text-2;
                 transition: transform 0.5s;
                 padding-bottom: 0.5rem;
-                font-size: 1.5rem !important;
+                font-size: 1.1rem !important;
 
                 &:hover{
                     color: $primary-color !important;
@@ -40,5 +45,16 @@ $text-2: #A2A2A2;
                 }
             }
         }
+    }
+    .developer-sign{
+        font-size: 0.8rem;
+        color: #b0b0b0;
+        padding-bottom: 1.5rem;
+         a{
+            color: $text-white;
+            &:hover{
+                color: $primary-color;
+            }
+         }
     }
 }

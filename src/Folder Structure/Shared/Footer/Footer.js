@@ -9,7 +9,7 @@ const Footer = () => {
             <footer className="footer p-10 text-base-content">
                 <div>
                     <Link to={'/'}><img src={logoFooter} alt="Logo" /></Link>
-                    <p className='text-lg text-slate-400 mt-6'>Edwin Diaz is a software and web technologies engineer, a life coach trainer who is also a serial .</p>
+                    <p className='text-lg text-slate-400 mt-6'>Edwin Diaz is a software and web technologies engineer, a life coach trainer who is also a serial .</p>                    
                 </div>
                 <div>
                     <span className="footer_title text-lg font-semibold text-lg">About</span>
@@ -29,6 +29,7 @@ const Footer = () => {
                     <Link to={'/accessability'} className="link link-hover text-base">Accessability</Link>
                 </div>
             </footer>
+            <p className='developer-sign text-center'>Developed By <Link to={'https://github.com/rirefat'}>Rafiul Islam Refat</Link> || 2023</p>
         </div>
     );
 };
