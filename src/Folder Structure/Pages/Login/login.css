@@ -1,0 +1,79 @@
+.login {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.login .login-container {
+  padding: 4.5rem 9.375rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+}
+.login .login-container .right-section {
+  width: 611px;
+  border: 1px solid #c8c8c8;
+  border-radius: 10px;
+  padding: 5rem;
+}
+.login .login-container .right-section form .btn {
+  background-color: #FF3811;
+  color: #fff;
+  border: none;
+}
+.login .login-container .right-section form .btn:hover {
+  background-color: #c71007;
+}
+.login .login-container .right-section .social-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login .login-container .right-section .social-login .link {
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  background-color: #EEEEF1;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+.login .login-container .right-section .social-login .facebook {
+  color: #315090;
+}
+.login .login-container .right-section .social-login .linkedin {
+  color: #006EAB;
+}
+.login .login-container .right-section .navigate-login-link a {
+  color: #FF3811;
+}
+
+@media screen and (max-width: 1110px) {
+  .right-section {
+    padding: 3rem !important;
+  }
+}
+@media screen and (max-width: 975px) {
+  .login-container {
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 670px) {
+  .right-section {
+    width: 30rem !important;
+  }
+}
+@media screen and (max-width: 555px) {
+  .right-section {
+    width: 25rem !important;
+  }
+}
+@media screen and (max-width: 470px) {
+  .right-section {
+    padding: 2rem !important;
+    width: 20rem !important;
+  }
+}
+@media screen and (max-width: 350px) {
+  .right-section {
+    padding: 1.7rem !important;
+    width: 18rem !important;
+  }
+}/*# sourceMappingURL=login.css.map */
