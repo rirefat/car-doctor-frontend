@@ -111,6 +111,39 @@
   background-color: #c71007;
 }
 
+@media screen and (max-width: 1410px) {
+  .service-features {
+    gap: 0.5rem !important;
+  }
+}
+@media screen and (max-width: 1375px) {
+  .service-features {
+    gap: 1.5rem !important;
+  }
+  .service-features .service-feature {
+    width: 18rem !important;
+    height: 12.75rem !important;
+    padding: 2rem !important;
+  }
+}
+@media screen and (max-width: 1235px) {
+  .service-features {
+    gap: 1rem !important;
+  }
+  .service-features .service-feature {
+    width: 16rem !important;
+    padding: 1rem !important;
+  }
+}
+@media screen and (max-width: 1140px) {
+  .service-features {
+    gap: 0.5rem !important;
+  }
+  .service-features .service-feature {
+    width: 14rem !important;
+    padding: 1rem !important;
+  }
+}
 @media screen and (max-width: 1220px) {
   .breadcrumb {
     position: absolute;
@@ -120,11 +153,39 @@
   }
 }
 @media screen and (max-width: 1040px) {
+  .main-body {
+    gap: 1.5rem !important;
+  }
+  .main-body .right-section {
+    padding: 0 !important;
+  }
   .breadcrumb {
     position: absolute;
     color: #fff;
     bottom: 3%;
     left: 22% !important;
+  }
+}
+@media screen and (max-width: 940px) {
+  .main-body {
+    grid-template-columns: 1fr !important;
+  }
+  .main-body .left-section .service-features {
+    margin: 2.5rem 0;
+    gap: 1.5rem;
+  }
+  .main-body .left-section .service-features .service-feature {
+    width: 18rem !important;
+    padding: 2rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .main-body .left-section .service-features {
+    gap: 1.5rem;
+  }
+  .main-body .left-section .service-features .service-feature {
+    width: 16rem !important;
+    padding: 1.8rem;
   }
 }
 @media screen and (max-width: 920px) {
@@ -143,6 +204,16 @@
     left: 28% !important;
   }
 }
+@media screen and (max-width: 840px) {
+  .main-body .left-section .service-features {
+    gap: 1.5rem !important;
+  }
+  .main-body .left-section .service-features .service-feature {
+    width: 12rem !important;
+    height: auto !important;
+    padding: 1.8rem !important;
+  }
+}
 @media screen and (max-width: 710px) {
   .breadcrumb {
     position: absolute;
@@ -150,5 +221,23 @@
     bottom: 3%;
     left: 28% !important;
     font-size: 1.2rem !important;
+  }
+}
+@media screen and (max-width: 1410px) {
+  .service-features {
+    gap: 0.5rem !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .main-body .left-section .service-features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .main-body .left-section .service-features .service-feature {
+    width: 22rem !important;
+    padding: 1.8rem;
   }
 }/*# sourceMappingURL=ServiceDetails.css.map */
