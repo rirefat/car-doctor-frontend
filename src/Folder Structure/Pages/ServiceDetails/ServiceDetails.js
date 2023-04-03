@@ -82,7 +82,7 @@ const ServiceDetails = () => {
                 </div>
             </div>
 
-            <div className="main-body">
+            <div className="main-body mt-16">
                 <div className="left-section">
                     <img src={serviceImg} alt="Service Img" className='feature-img' />
                     <h2 className='service-title text-3xl font-semibold my-10'>Service Name</h2>
