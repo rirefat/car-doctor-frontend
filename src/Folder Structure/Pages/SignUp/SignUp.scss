@@ -17,10 +17,11 @@ $btn-hover-bg:#c71007;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 5rem;
         
         .right-section{
             width: 611px;
-            border: 1px solid gray;
+            border: 1px solid #c8c8c8;
             border-radius: 10px;
             padding: 5rem;
 
@@ -62,5 +63,40 @@ $btn-hover-bg:#c71007;
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    .right-section{
+        padding: 3rem !important;
+    }
+}
+
+@media screen and (max-width: 975px){
+    .sign-up-container{
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 670px){
+    .right-section{
+        width: 30rem !important;
+    }
+}
+@media screen and (max-width: 555px){
+    .right-section{
+        width: 25rem !important;
+    }
+}
+@media screen and (max-width: 470px){
+    .right-section{
+        padding: 2rem !important;
+        width: 20rem !important;
+    }
+}
+@media screen and (max-width: 350px){
+    .right-section{
+        padding: 1.7rem !important;
+        width: 18rem !important;
     }
 }
