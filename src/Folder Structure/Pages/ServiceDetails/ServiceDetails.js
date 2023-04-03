@@ -106,6 +106,7 @@ const ServiceDetails = () => {
 
                 <div className="right-section">
                     <div className="mb-5 available-services"></div>
+
                     <div className="mb-5 download-documents bg-black p-10">
                         <h4 className='text-xl text-white'>Download</h4>
                         <div className="doc my-5 flex justify-between">
@@ -129,8 +130,13 @@ const ServiceDetails = () => {
                             <div className="btn download-btn text-2xl bg-primary-color"><BsFillCloudArrowDownFill></BsFillCloudArrowDownFill></div>
                         </div>
                     </div>
+
                     <div className="mb-5 promotional-section"></div>
-                    <div className="mb-5 checkout"></div>
+
+                    <div className="mb-5 checkout">
+                        <h3 className='text-3xl font-semibold mb-4'>Price: $250</h3>
+                        <Link to={'/checkout'}><button className="btn checkout-btn shadow-md w-full">Proceed Checkout</button></Link>
+                    </div>
                 </div>
             </div>
         </div>

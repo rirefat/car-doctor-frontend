@@ -66,6 +66,13 @@
 .service-details .main-body .right-section .download-documents {
   border-radius: 10px;
 }
+.service-details .main-body .right-section .checkout-btn {
+  background-color: #FF3811;
+  border: #FF3811;
+}
+.service-details .main-body .right-section .checkout-btn:hover {
+  background-color: #c71007;
+}
 
 @media screen and (max-width: 1220px) {
   .breadcrumb {

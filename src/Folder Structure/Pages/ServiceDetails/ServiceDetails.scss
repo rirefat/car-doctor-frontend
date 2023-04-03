@@ -89,6 +89,15 @@ $border-basic: 1px solid #c8c8c8;
             .download-documents{
                 border-radius: 10px;
             }
+
+            .checkout-btn{
+                background-color: $primary-color;
+                border: $primary-color;
+
+                &:hover{
+                    background-color: $btn-hover-bg;
+                }
+            }
         }
     }
 }
