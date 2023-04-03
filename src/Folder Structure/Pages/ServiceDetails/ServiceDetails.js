@@ -4,6 +4,7 @@ import TopBanner from '../../Shared/TopBanner/TopBanner';
 import { Link } from 'react-router-dom';
 
 import serviceImg from '../../../assets/images/banner/3.jpg'
+import serviceImgFeature from '../../../assets/images/banner/2.jpg'
 import step1 from '../../../assets/icons/step-1.svg'
 import step2 from '../../../assets/icons/step-2.svg'
 import step3 from '../../../assets/icons/step-3.svg'
@@ -98,6 +99,7 @@ const ServiceDetails = () => {
                             </div>)
                         }
                     </div>
+                    <img src={serviceImgFeature} alt="Service Img" className='feature-img mb-8'/>
                 </div>
 
 
