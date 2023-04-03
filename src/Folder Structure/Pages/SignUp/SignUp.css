@@ -1,0 +1,45 @@
+.sign-up {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.sign-up .sign-up-container {
+  padding: 4.5rem 9.375rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sign-up .sign-up-container .right-section {
+  width: 611px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 5rem;
+}
+.sign-up .sign-up-container .right-section form .btn {
+  background-color: #FF3811;
+  color: #fff;
+  border: none;
+}
+.sign-up .sign-up-container .right-section form .btn:hover {
+  background-color: #c71007;
+}
+.sign-up .sign-up-container .right-section .social-sign-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign-up .sign-up-container .right-section .social-sign-up .link {
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  background-color: #EEEEF1;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+.sign-up .sign-up-container .right-section .social-sign-up .facebook {
+  color: #315090;
+}
+.sign-up .sign-up-container .right-section .social-sign-up .linkedin {
+  color: #006EAB;
+}
+.sign-up .sign-up-container .right-section .navigate-login-link a {
+  color: #FF3811;
+}/*# sourceMappingURL=SignUp.css.map */
