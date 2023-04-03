@@ -85,7 +85,11 @@ $border-basic: 1px solid #c8c8c8;
             }
         }
 
-        .right-section {}
+        .right-section {
+            .download-documents{
+                border-radius: 10px;
+            }
+        }
     }
 }
 

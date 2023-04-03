@@ -63,6 +63,10 @@
   height: 83px !important;
   width: 83px !important;
 }
+.service-details .main-body .right-section .download-documents {
+  border-radius: 10px;
+}
+
 @media screen and (max-width: 1220px) {
   .breadcrumb {
     position: absolute;

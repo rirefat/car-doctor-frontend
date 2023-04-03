@@ -3,6 +3,8 @@ import './ServiceDetails.css';
 import TopBanner from '../../Shared/TopBanner/TopBanner';
 import { Link } from 'react-router-dom';
 
+import { BsFiletypeDoc, BsFillCloudArrowDownFill } from 'react-icons/bs';
+
 import serviceImg from '../../../assets/images/banner/3.jpg'
 import serviceImgFeature from '../../../assets/images/banner/2.jpg'
 import step1 from '../../../assets/icons/step-1.svg'
@@ -10,7 +12,7 @@ import step2 from '../../../assets/icons/step-2.svg'
 import step3 from '../../../assets/icons/step-3.svg'
 
 const ServiceDetails = () => {
-    const serviceFeatures =[
+    const serviceFeatures = [
         {
             id: 1,
             title: "Instant Car Services",
@@ -34,9 +36,9 @@ const ServiceDetails = () => {
     ];
 
     const serviceSteps = [
-        {id: 1, icon: step1, title: "STEP 1", desc: "It uses a dictionary of over 200."}, 
-        {id: 2, icon: step2, title: "STEP 2", desc: "It uses a dictionary of over 200."}, 
-        {id: 3, icon: step3, title: "STEP 3", desc: "It uses a dictionary of over 200."}, 
+        { id: 1, icon: step1, title: "STEP 1", desc: "It uses a dictionary of over 200." },
+        { id: 2, icon: step2, title: "STEP 2", desc: "It uses a dictionary of over 200." },
+        { id: 3, icon: step3, title: "STEP 3", desc: "It uses a dictionary of over 200." },
     ];
 
     return (
@@ -72,13 +74,13 @@ const ServiceDetails = () => {
 
             <div className="main-body">
                 <div className="left-section">
-                    <img src={serviceImg} alt="Service Img" className='feature-img'/>
+                    <img src={serviceImg} alt="Service Img" className='feature-img' />
                     <h2 className='service-title text-3xl font-semibold my-10'>Service Name</h2>
                     <p className='service-description text-base'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
 
                     <div className="service-features">
                         {
-                            serviceFeatures.map((feature)=><div key={feature.id} className='service-feature'>
+                            serviceFeatures.map((feature) => <div key={feature.id} className='service-feature'>
                                 <h3 className='font-bold text-lg mb-5'>{feature.title}</h3>
                                 <p className='text-secondary-text-color'>{feature.description}</p>
                             </div>)
@@ -92,19 +94,43 @@ const ServiceDetails = () => {
 
                     <div className="servicing-steps my-8">
                         {
-                            serviceSteps.map((step)=><div key={step.id} className='servicing-step'>
+                            serviceSteps.map((step) => <div key={step.id} className='servicing-step'>
                                 <img src={step.icon} alt="Service Step" />
                                 <h3 className='font-bold text-lg mb-5 text-center mt-4'>{step.title}</h3>
                                 <p className='text-secondary-text-color text-center'>{step.desc}</p>
                             </div>)
                         }
                     </div>
-                    <img src={serviceImgFeature} alt="Service Img" className='feature-img mb-8'/>
+                    <img src={serviceImgFeature} alt="Service Img" className='feature-img mb-8' />
                 </div>
 
-
                 <div className="right-section">
-                    r
+                    <div className="mb-5 available-services"></div>
+                    <div className="mb-5 download-documents bg-black p-10">
+                        <h4 className='text-xl text-white'>Download</h4>
+                        <div className="doc my-5 flex justify-between">
+                            <div className="flex items-center">
+                                <div className="icon text-3xl mr-3 text-white"><BsFiletypeDoc></BsFiletypeDoc></div>
+                                <div className=''>
+                                    <p className="doc-title text-lg text-white">Our Brochure</p>
+                                    <p className='text-secondary-text-color text-sm'>Download</p>
+                                </div>
+                            </div>
+                            <div className="btn download-btn text-2xl bg-primary-color"><BsFillCloudArrowDownFill></BsFillCloudArrowDownFill></div>
+                        </div>
+                        <div className="doc my-5 flex justify-between">
+                            <div className="flex items-center">
+                                <div className="icon text-3xl mr-3 text-white"><BsFiletypeDoc></BsFiletypeDoc></div>
+                                <div className=''>
+                                    <p className="doc-title text-lg text-white">Company Details</p>
+                                    <p className='text-secondary-text-color text-sm'>Download</p>
+                                </div>
+                            </div>
+                            <div className="btn download-btn text-2xl bg-primary-color"><BsFillCloudArrowDownFill></BsFillCloudArrowDownFill></div>
+                        </div>
+                    </div>
+                    <div className="mb-5 promotional-section"></div>
+                    <div className="mb-5 checkout"></div>
                 </div>
             </div>
         </div>
