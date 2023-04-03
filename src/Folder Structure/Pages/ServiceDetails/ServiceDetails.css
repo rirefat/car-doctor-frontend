@@ -2,7 +2,10 @@
   max-width: 1440px;
   margin: 3rem auto;
   padding: 0 9.375rem;
+}
+.service-details .top-banner {
   position: relative;
+  margin-bottom: 3.5rem;
 }
 .service-details .breadcrumb {
   position: absolute;
@@ -10,7 +13,37 @@
   bottom: 3%;
   left: 16%;
 }
-
+.service-details .main-body {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2.5rem;
+}
+.service-details .main-body .left-section img {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+}
+.service-details .main-body .left-section .service-description {
+  color: #737373 !important;
+  line-height: 2rem;
+}
+.service-details .main-body .left-section .service-features {
+  margin: 2.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.service-details .main-body .left-section .service-features .service-feature {
+  background-color: #F3F3F3;
+  width: 21rem;
+  height: 12.75rem;
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  border-top: 3px solid #FF3811;
+}
 @media screen and (max-width: 1220px) {
   .breadcrumb {
     position: absolute;
