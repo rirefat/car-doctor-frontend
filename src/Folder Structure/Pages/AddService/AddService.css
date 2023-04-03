@@ -1,31 +1,31 @@
-.checkout-page {
+.add-service-page {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 9.375rem;
 }
-.checkout-page .checkout-form {
+.add-service-page .add-service-form {
   background-color: #F3F3F3;
   padding: 6rem;
   border-radius: 10px;
 }
-.checkout-page .checkout-form textarea {
+.add-service-page .add-service-form textarea {
   min-height: 15.5rem !important;
 }
-.checkout-page .checkout-form .checkout-form-btn {
+.add-service-page .add-service-form .add-service-form-btn {
   background-color: #FF3811;
   border: none;
 }
-.checkout-page .checkout-form .checkout-form-btn:hover {
+.add-service-page .add-service-form .add-service-form-btn:hover {
   background-color: #c71007;
 }
 
 @media screen and (max-width: 880px) {
-  .checkout-form {
+  .add-service-form {
     padding: 2rem !important;
   }
 }
 @media screen and (max-width: 680px) {
-  .checkout-form .checkout-form-top {
+  .add-service-form .add-service-form-top {
     grid-template-columns: 1fr !important;
   }
-}/*# sourceMappingURL=CheckOut.css.map */
+}/*# sourceMappingURL=AddService.css.map */
