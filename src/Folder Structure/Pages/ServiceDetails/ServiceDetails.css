@@ -9,4 +9,46 @@
   color: #fff;
   bottom: 3%;
   left: 16%;
+}
+
+@media screen and (max-width: 1220px) {
+  .breadcrumb {
+    position: absolute;
+    color: #fff;
+    bottom: 3%;
+    left: 20% !important;
+  }
+}
+@media screen and (max-width: 1040px) {
+  .breadcrumb {
+    position: absolute;
+    color: #fff;
+    bottom: 3%;
+    left: 22% !important;
+  }
+}
+@media screen and (max-width: 920px) {
+  .breadcrumb {
+    position: absolute;
+    color: #fff;
+    bottom: 3%;
+    left: 25% !important;
+  }
+}
+@media screen and (max-width: 860px) {
+  .breadcrumb {
+    position: absolute;
+    color: #fff;
+    bottom: 3%;
+    left: 28% !important;
+  }
+}
+@media screen and (max-width: 710px) {
+  .breadcrumb {
+    position: absolute;
+    color: #fff;
+    bottom: 3%;
+    left: 28% !important;
+    font-size: 1.2rem !important;
+  }
 }/*# sourceMappingURL=ServiceDetails.css.map */
