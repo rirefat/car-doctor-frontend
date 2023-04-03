@@ -43,5 +43,49 @@ $btn-hover-bg: #c71007;
 }
 
 @media screen and (max-width: 1265px) {
-    
+    .title{
+        font-size: 0.7rem !important;
+    }
+    .desc{
+        font-size: 1.1rem !important;
+    }
+}
+
+@media screen and (max-width: 1115px){
+    .contact{
+        padding: 5rem 3rem !important;
+
+        .title{
+            font-size: 0.6rem !important;
+        }
+        .desc{
+            font-size: 1.0rem !important;
+        }
+    }
+}
+
+@media screen and (max-width: 1060px){
+    .contact-container{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1060px){
+    .contact{
+        padding: 3rem 1.5rem !important;
+    }
+    .title{
+        font-size: 0.5rem !important;
+    }
+    .desc{
+        font-size: 0.85rem !important;
+    }
+}
+
+@media screen and (max-width: 825px){
+    .contact{
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
 }
