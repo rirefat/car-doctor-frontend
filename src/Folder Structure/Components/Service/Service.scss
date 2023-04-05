@@ -1,0 +1,12 @@
+.single-service{
+    .add-to-cart{
+        font-size: 1.5rem !important;
+        background-color: #ffffff00;
+        padding: 0.5rem;
+        border-radius: 50%;
+
+        &:hover{
+            background-color: #ffe2d4;
+        }
+    }
+}
