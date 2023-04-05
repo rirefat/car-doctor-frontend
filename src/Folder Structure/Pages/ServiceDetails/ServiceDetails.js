@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './ServiceDetails.css';
 import TopBanner from '../../Shared/TopBanner/TopBanner';
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 import { BsFiletypeDoc, BsFillCloudArrowDownFill,BsArrowRight } from 'react-icons/bs';
 
@@ -58,11 +58,13 @@ const ServiceDetails = () => {
         .then(data=>setAvailableServices(data))
     },[]);
 
+    const singleService= useLoaderData();
+
     return (
         <div className='service-details'>
             <div className="top-banner">
                 <TopBanner
-                    title={"Service Name"}
+                    title={singleService.name ? singleService.name : "Service Name"}
                     subtitle={"Service Details"}
                 ></TopBanner>
                 <div className="breadcrumb">
@@ -82,7 +84,7 @@ const ServiceDetails = () => {
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="w-4 h-4 mr-2 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                                Service Name
+                                {singleService.name}
                             </li>
                         </ul>
                     </div>
@@ -91,8 +93,8 @@ const ServiceDetails = () => {
 
             <div className="main-body mt-16">
                 <div className="left-section">
-                    <img src={serviceImg} alt="Service Img" className='feature-img' />
-                    <h2 className='service-title text-3xl font-semibold my-10'>Service Name</h2>
+                    <img src={singleService.img} alt="Service Img" className='feature-img' />
+                    <h2 className='service-title text-3xl font-semibold my-10'>{singleService.name}</h2>
                     <p className='service-description text-base'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
 
                     <div className="service-features">
@@ -167,7 +169,7 @@ const ServiceDetails = () => {
                     </div>
 
                     <div className="mb-5 checkout">
-                        <h3 className='text-3xl font-semibold mb-4'>Price: $250</h3>
+                        <h3 className='text-3xl font-semibold mb-4'>Price: ${singleService.price}</h3>
                         <Link to={'/checkout'}><button className="btn checkout-btn shadow-md w-full">Proceed Checkout</button></Link>
                     </div>
                 </div>
