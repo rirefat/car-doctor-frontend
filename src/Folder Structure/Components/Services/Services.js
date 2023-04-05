@@ -10,7 +10,8 @@ const Services = () => {
         .then(res=>res.json())
         .then(data=>setServices(data))
     },[]);
-    console.log(services);
+
+    const selectedServices = services.slice(0,6);
     return (
         <div className='services-section'>
             <SectionHeader
@@ -22,7 +23,7 @@ const Services = () => {
 
             <div className="services-container">
                 {
-                    services.map(service=><Service key={service._id} service={service}></Service>)
+                    selectedServices.map(service=><Service key={service._id} service={service}></Service>)
                 }
             </div>
         </div>
