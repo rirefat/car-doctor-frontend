@@ -11,6 +11,7 @@ import ServicesPage from "../../Pages/ServicesPage/ServicesPage";
 import Cart from "../../Pages/Cart/Cart";
 import Contact from "../../Pages/Contact/Contact";
 import ProductPage from "../../Pages/ProductPage/ProductPage";
+import AdminDashboard from "../../Pages/AdminDashboard/AdminDashboard";
 
 const router = createBrowserRouter([
     {
@@ -29,11 +30,12 @@ const router = createBrowserRouter([
             { path: '/contact', element: <Contact></Contact> },
             { path: '/checkout', element: <CheckOut></CheckOut> },
             { path: '/cart', element: <Cart></Cart> },
-            { path: '/add-service', element: <AddService></AddService> },
+            { path: '/add-service', element: <AddService></AddService> },            
         ]
     },
     { path: '/sign-up', element: <SignUp></SignUp> },
     { path: '/login', element: <Login></Login> },
+    { path: '/admin-dashboard', element: <AdminDashboard></AdminDashboard> },
     { path: '*', element: <NotFoundPage></NotFoundPage> },
 ]);
 

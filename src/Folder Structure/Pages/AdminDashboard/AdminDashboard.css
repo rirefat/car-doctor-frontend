@@ -1,0 +1,18 @@
+.admin-dashboard {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.admin-dashboard .dashboard-container {
+  background-color: #f3f3ff;
+  height: 92vh;
+  width: 95vw;
+  overflow-y: scroll;
+  border-radius: 10px;
+}
+.admin-dashboard .dashboard-container::-webkit-scrollbar {
+  width: 0;
+}/*# sourceMappingURL=AdminDashboard.css.map */
