@@ -1,0 +1,84 @@
+[
+    {
+        "id": 1,
+        "name": "Oil Filter",
+        "description": "A high-quality oil filter is essential for keeping your engine running smoothly. This filter traps contaminants and debris in the oil, preventing them from causing damage to your engine.",
+        "price": 10.99,
+        "img":"https://i.ibb.co/6RW02p8/Oil-Filter.webp"
+      },
+      {
+        "id": 2,
+        "name": "Tire Pressure Gauge",
+        "description": "Maintaining proper tire pressure is important for your safety and your car's performance. This tire pressure gauge is accurate, easy to use, and durable.",
+        "price": 7.99,
+        "img":"https://i.ibb.co/mCqTjPt/Tire-Pressure-Gauge.webp"
+      },
+      {
+        "id": 3,
+        "name": "Brake Pads",
+        "description": "Brake pads are a crucial component of your car's braking system. These high-quality brake pads provide excellent stopping power and durability.",
+        "price": 49.99,
+        "img":"https://i.ibb.co/Rzm7cVn/Brake-Pads.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Air Filter",
+        "description": "A clean air filter is essential for your car's performance and fuel efficiency. This high-quality air filter traps dust, dirt, and other particles, keeping them out of your engine.",
+        "price": 14.99,
+        "img":"https://i.ibb.co/1Kdb5MF/Air-Filter.webp"
+      },
+      {
+        "id": 5,
+        "name": "Battery Charger",
+        "description": "A battery charger is a must-have tool for maintaining your car's battery. This charger is easy to use and can charge most types of batteries quickly and safely.",
+        "price": 39.99,
+        "img":"https://i.ibb.co/nM4fyjk/Battery-Charger.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Wheel Alignment Tool",
+        "description": "Proper wheel alignment is important for your car's handling and tire wear. This wheel alignment tool makes it easy to check and adjust your car's alignment at home.",
+        "price": 69.99,
+        "img":"https://i.ibb.co/0G30kSF/Wheel-Alignment-Tool.jpg"
+      },
+      {
+        "id": 7,
+        "name": "Transmission Fluid",
+        "description": "High-quality transmission fluid is essential for keeping your car's transmission running smoothly. This fluid provides excellent protection against wear and tear, and is compatible with most types of transmissions.",
+        "price": 19.99,
+        "img":"https://i.ibb.co/YynRdVG/Transmission-Fluid.jpg"
+      },
+      {
+        "id": 8,
+        "name": "Radiator Coolant",
+        "description": "Keeping your engine cool is important for preventing damage and maintaining performance. This high-quality radiator coolant provides excellent protection against overheating and corrosion.",
+        "price": 12.99,
+        "img":"https://i.ibb.co/yYQcq1W/Radiator-Coolant.jpg"
+      },
+      {
+        "id": 9,
+        "name": "Fuel Injector Cleaner",
+        "description": "Dirty fuel injectors can cause a variety of problems, from reduced performance to engine damage. This fuel injector cleaner is easy to use and can help restore your car's performance and fuel efficiency.",
+        "price": 8.99,
+        "img":"https://i.ibb.co/GPSk67v/Fuel-Injector-Cleaner.jpg"
+      },
+      {
+        "id": 10,
+        "name": "Timing Belt Kit",
+        "description": "Replacing your car's timing belt is an important maintenance task that can prevent costly engine damage. This timing belt kit includes all the parts you need for a complete and easy replacement.",
+        "price": 129.99,
+        "img":"https://i.ibb.co/0GFChkD/Timing-Belt-Kit.jpg"
+      },
+      {
+        "id": 11,
+        "name": "Shock Absorbers",
+        "description": "Shock absorbers are a key component of your car's suspension system, providing a smooth ride and preventing damage to your car's other components. These high-quality shock absorbers are durable and reliable.",
+        "price": 79.99,
+        "img":"https://i.ibb.co/80xkxB8/Shock-Absorbers.jpg"
+      }
+]
+
+
+
+
+
