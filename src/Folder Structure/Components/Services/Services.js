@@ -21,11 +21,12 @@ const Services = () => {
                 center={true}
             ></SectionHeader>
 
-            <div className="services-container">
+            <div className="services-container mb-4">
                 {
                     selectedServices.map(service=><Service key={service._id} service={service}></Service>)
                 }
             </div>
+            <div className="btn-area flex items-center justify-center "><button className="btn mx-5 px-5 bg-primary-color border-transparent hover:bg-btn-hover-bg">More Services</button></div>
         </div>
     );
 };
