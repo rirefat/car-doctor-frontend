@@ -9,6 +9,7 @@ import CheckOut from "../../Pages/CheckOut/CheckOut";
 import AddService from "../../Pages/AddService/AddService";
 import ServicesPage from "../../Pages/ServicesPage/ServicesPage";
 import Cart from "../../Pages/Cart/Cart";
+import Contact from "../../Pages/Contact/Contact";
 
 const router = createBrowserRouter([
     {
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
             {path:'/home', element: <Home></Home>},
             {path:'/services', element: <ServicesPage></ServicesPage>},
             {path:'/service-details', element: <ServiceDetails></ServiceDetails>},
+            {path:'/contact', element: <Contact></Contact>},
             {path:'/checkout', element: <CheckOut></CheckOut>},
             {path:'/cart', element: <Cart></Cart>},
             {path:'/add-service', element: <AddService></AddService>},

@@ -1,1 +1,12 @@
-/*# sourceMappingURL=ServicesPage.css.map */
+.services-page {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 9.375rem;
+}
+.services-page .services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}/*# sourceMappingURL=ServicesPage.css.map */

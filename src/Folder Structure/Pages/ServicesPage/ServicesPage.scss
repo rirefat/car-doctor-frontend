@@ -8,3 +8,17 @@ $section-universal-padding: 9.375rem;
 $font-family-primary: Inter, sans-serif;
 $btn-hover-bg:#c71007;
 $border-basic: 1px solid #c8c8c8;
+
+.services-page{
+    max-width: $section-max-width;
+    margin: 0 auto;
+    padding: 0 $section-universal-padding;
+
+    .services-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2.5rem;
+    }
+}
