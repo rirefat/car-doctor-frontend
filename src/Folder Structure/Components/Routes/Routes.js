@@ -10,6 +10,7 @@ import AddService from "../../Pages/AddService/AddService";
 import ServicesPage from "../../Pages/ServicesPage/ServicesPage";
 import Cart from "../../Pages/Cart/Cart";
 import Contact from "../../Pages/Contact/Contact";
+import ProductPage from "../../Pages/ProductPage/ProductPage";
 
 const router = createBrowserRouter([
     {
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
             {path:'/', element: <Home></Home>},
             {path:'/home', element: <Home></Home>},
             {path:'/services', element: <ServicesPage></ServicesPage>},
+            {path:'/products', element: <ProductPage></ProductPage>},
             {path:'/service-details', element: <ServiceDetails></ServiceDetails>},
             {path:'/contact', element: <Contact></Contact>},
             {path:'/checkout', element: <CheckOut></CheckOut>},
