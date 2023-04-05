@@ -7,6 +7,8 @@ import Login from "../../Pages/Login/Login";
 import ServiceDetails from "../../Pages/ServiceDetails/ServiceDetails";
 import CheckOut from "../../Pages/CheckOut/CheckOut";
 import AddService from "../../Pages/AddService/AddService";
+import ServicesPage from "../../Pages/ServicesPage/ServicesPage";
+import Cart from "../../Pages/Cart/Cart";
 
 const router = createBrowserRouter([
     {
@@ -15,8 +17,10 @@ const router = createBrowserRouter([
         children:[
             {path:'/', element: <Home></Home>},
             {path:'/home', element: <Home></Home>},
+            {path:'/services', element: <ServicesPage></ServicesPage>},
             {path:'/service-details', element: <ServiceDetails></ServiceDetails>},
             {path:'/checkout', element: <CheckOut></CheckOut>},
+            {path:'/cart', element: <Cart></Cart>},
             {path:'/add-service', element: <AddService></AddService>},
         ]
     },
