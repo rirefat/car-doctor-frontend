@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import SectionHeader from '../../Shared/SectionHeader/SectionHeader';
 import Service from '../Service/Service';
 import './Services.css';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
     const [services, setServices]=useState([]);
@@ -26,7 +27,9 @@ const Services = () => {
                     selectedServices.map(service=><Service key={service._id} service={service}></Service>)
                 }
             </div>
-            <div className="btn-area flex items-center justify-center "><button className="btn mx-5 px-5 bg-primary-color border-transparent hover:bg-btn-hover-bg">More Services</button></div>
+            <div className="btn-area flex items-center justify-center ">
+                <Link to={'/services'}><button className="btn mx-5 px-5 bg-primary-color border-transparent hover:bg-btn-hover-bg">More Services</button></Link>
+            </div>
         </div>
     );
 };
