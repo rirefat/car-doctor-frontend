@@ -25,7 +25,7 @@ const Products = () => {
 
             <div className="products-container mb-4">
                 {
-                    selectedProducts.map(service => <Product key={service._id} service={service}></Product>)
+                    selectedProducts.map(product => <Product key={product._id} product={product}></Product>)
                 }
             </div>
             <div className="btn-area flex items-center justify-center ">
