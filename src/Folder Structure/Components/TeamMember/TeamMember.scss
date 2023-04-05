@@ -1,0 +1,26 @@
+$primary-color: #FF3811;
+$text-primary: #151515;
+$text-secondary: #737373;
+$text-white: #fff;
+$text-2: #A2A2A2;
+$section-max-width: 1440px;
+$section-universal-padding: 9.375rem;
+$font-family-primary: Inter, sans-serif;
+$btn-hover-bg: #c71007;
+$border-basic: 1px solid #c8c8c8;
+
+.single-team-member {
+    .card-actions {
+        .social-links-team {
+            font-size: 1.5rem;
+            margin: 0.5rem;
+            padding: 0.5rem;
+            background-color: transparent;
+            border-radius: 50%;
+
+            &:hover {
+                background-color: #ffe2d4;
+            }
+        }
+    }
+}

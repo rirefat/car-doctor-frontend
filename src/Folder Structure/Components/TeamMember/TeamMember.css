@@ -1,0 +1,10 @@
+.single-team-member .card-actions .social-links-team {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: transparent;
+  border-radius: 50%;
+}
+.single-team-member .card-actions .social-links-team:hover {
+  background-color: #ffe2d4;
+}/*# sourceMappingURL=TeamMember.css.map */

@@ -1,0 +1,12 @@
+.team-section {
+  max-width: 1440px;
+  padding: 0 9.375rem;
+  margin: 0 auto 5rem;
+}
+.team-section .team-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}/*# sourceMappingURL=Team.css.map */
