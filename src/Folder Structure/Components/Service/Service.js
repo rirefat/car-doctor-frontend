@@ -13,8 +13,8 @@ const Service = (props) => {
                     <h2 className="card-title">{name}</h2>
                     <p className='price text-lg text-primary-color font-bold'>Price: $ {price}</p>
                     <div className="card-actions flex justify-between">
-                        <button className="btn btn-primary bg-white text-primary-color border-primary-color hover:bg-primary-color hover:text-white hover:border-transparent">Details</button>
-                        <Link className='add-to-cart'><BiCartAdd></BiCartAdd></Link>
+                        <Link to={`/service-details/${_id}`}><button className="btn btn-primary bg-white text-primary-color border-primary-color hover:bg-primary-color hover:text-white hover:border-transparent">Details</button></Link>
+                        <Link to={`/cart/${_id}`} className='add-to-cart'><BiCartAdd></BiCartAdd></Link>
                     </div>
                 </div>
             </div>

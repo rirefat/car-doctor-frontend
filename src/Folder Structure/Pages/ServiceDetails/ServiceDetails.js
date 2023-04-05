@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './ServiceDetails.css';
 import TopBanner from '../../Shared/TopBanner/TopBanner';
 import { Link } from 'react-router-dom';
@@ -50,6 +50,13 @@ const ServiceDetails = () => {
         { id: 5, title: "Engine Repair"},
         { id: 6, title: "Engine Repair"},
     ];
+
+    const [availableServices, setAvailableServices]=useState([]);
+    useEffect(()=>{
+        fetch("http://localhost:5000/services")
+        .then(res=>res.json())
+        .then(data=>setAvailableServices(data))
+    },[]);
 
     return (
         <div className='service-details'>
@@ -118,8 +125,8 @@ const ServiceDetails = () => {
                     <div className="mb-5 available-services p-10">
                         <h4 className='text-xl text-black font-semibold mb-5'>Available Services</h4>
                         {
-                            services.map(service=><div key={service.id} className='service'>
-                                <Link to={'#'}>{service.title}<span className="icon"><BsArrowRight></BsArrowRight></span></Link>                                
+                            availableServices.map(availableService=><div key={availableService._id} className='service'>
+                                <Link to={'#'}>{availableService.name}<span className="icon"><BsArrowRight></BsArrowRight></span></Link>                                
                             </div>)
                         }
                     </div>

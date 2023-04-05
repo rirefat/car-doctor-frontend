@@ -21,7 +21,7 @@ const router = createBrowserRouter([
             {path:'/home', element: <Home></Home>},
             {path:'/services', element: <ServicesPage></ServicesPage>},
             {path:'/products', element: <ProductPage></ProductPage>},
-            {path:'/service-details', element: <ServiceDetails></ServiceDetails>},
+            {path:'/service-details/:id', element: <ServiceDetails></ServiceDetails>},
             {path:'/contact', element: <Contact></Contact>},
             {path:'/checkout', element: <CheckOut></CheckOut>},
             {path:'/cart', element: <Cart></Cart>},
