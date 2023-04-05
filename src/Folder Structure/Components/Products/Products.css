@@ -1,0 +1,13 @@
+.products-section {
+  max-width: 1440px;
+  padding: 0 9.375rem;
+  margin: 0 auto 5rem;
+}
+.products-section .products-container {
+  margin: 2.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}/*# sourceMappingURL=Products.css.map */
