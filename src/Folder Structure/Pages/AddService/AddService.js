@@ -11,10 +11,9 @@ const AddService = () => {
             ></TopBanner>
             <div className="add-service-form my-16">
                 <form>
-                    <div className='add-service-form-top grid grid-cols-2 gap-3.5 mb-3.5'>
+                    <div className='add-service-form-top grid grid-cols-3 gap-3.5 mb-3.5'>
                         <input required type="text" placeholder="Service Name" className=" input w-full " />
-                        <input required type="text" placeholder="Type" className=" input w-full " />
-                        <input required type="number" placeholder="Service Cost" className=" input w-full " />
+                        <input required type="number" placeholder="Service Price" className=" input w-full " />
                         <input required type="url" placeholder="Service Image URL" className=" input w-full " />
                     </div>
                     <textarea required placeholder="Service Description" className=" textarea textarea-lg w-full" ></textarea>
