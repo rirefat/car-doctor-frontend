@@ -12,7 +12,7 @@ const AvailableProducts = () => {
 
             <div className="products-summery flex justify-between items-center p-4 border-b-2 border-stone-300 mb-4">
                 <p className='text-xl font-medium'>All Products: {availableProducts.length}</p>
-                <button className="shadow-xl btn btn-square btn-outline text-2xl hover:text-white"><IoMdAdd></IoMdAdd></button>
+                <Link to={'/add-product'}><button className="shadow-xl btn btn-square btn-outline text-2xl hover:text-white"><IoMdAdd></IoMdAdd></button></Link>
             </div>
 
             <div className="products-container">

@@ -1,0 +1,31 @@
+.add-product-page {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 9.375rem;
+}
+.add-product-page .add-product-form {
+  background-color: #F3F3F3;
+  padding: 6rem;
+  border-radius: 10px;
+}
+.add-product-page .add-product-form textarea {
+  min-height: 15.5rem !important;
+}
+.add-product-page .add-product-form .add-product-form-btn {
+  background-color: #FF3811;
+  border: none;
+}
+.add-product-page .add-product-form .add-product-form-btn:hover {
+  background-color: #c71007;
+}
+
+@media screen and (max-width: 880px) {
+  .add-product-form {
+    padding: 2rem !important;
+  }
+}
+@media screen and (max-width: 680px) {
+  .add-product-form .add-product-form-top {
+    grid-template-columns: 1fr !important;
+  }
+}/*# sourceMappingURL=AddProduct.css.map */

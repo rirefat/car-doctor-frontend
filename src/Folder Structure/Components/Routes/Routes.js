@@ -16,6 +16,7 @@ import Overview from "../../DashboardComponents/Overview/Overview";
 import AvailableProducts from "../../DashboardComponents/AvailableProducts/AvailableProducts";
 import AvailableServices from "../../DashboardComponents/AvailableServices/AvailableServices";
 import Manpower from "../../DashboardComponents/Manpower/Manpower";
+import AddProduct from "../../Pages/AddProduct/AddProduct";
 
 const router = createBrowserRouter([
     {
@@ -35,6 +36,7 @@ const router = createBrowserRouter([
             { path: '/checkout', element: <CheckOut></CheckOut> },
             { path: '/cart', element: <Cart></Cart> },
             { path: '/add-service', element: <AddService></AddService> },
+            { path: '/add-product', element: <AddProduct></AddProduct> },
         ]
     },
     { path: '/sign-up', element: <SignUp></SignUp> },
