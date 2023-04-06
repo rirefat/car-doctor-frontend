@@ -12,6 +12,7 @@ import Cart from "../../Pages/Cart/Cart";
 import Contact from "../../Pages/Contact/Contact";
 import ProductPage from "../../Pages/ProductPage/ProductPage";
 import AdminDashboard from "../../Pages/AdminDashboard/AdminDashboard";
+import Overview from "../../DashboardComponents/Overview/Overview";
 
 const router = createBrowserRouter([
     {
@@ -25,17 +26,26 @@ const router = createBrowserRouter([
             {
                 path: '/service-details/:id',
                 element: <ServiceDetails></ServiceDetails>,
-                loader: async ({params})=> {return fetch(`http://localhost:5000/services/${params.id}`)}
+                loader: async ({ params }) => { return fetch(`http://localhost:5000/services/${params.id}`) }
             },
             { path: '/contact', element: <Contact></Contact> },
             { path: '/checkout', element: <CheckOut></CheckOut> },
             { path: '/cart', element: <Cart></Cart> },
-            { path: '/add-service', element: <AddService></AddService> },            
+            { path: '/add-service', element: <AddService></AddService> },
         ]
     },
     { path: '/sign-up', element: <SignUp></SignUp> },
     { path: '/login', element: <Login></Login> },
-    { path: '/admin-dashboard', element: <AdminDashboard></AdminDashboard> },
+    {
+        path: '/admin-dashboard',
+        element: <AdminDashboard></AdminDashboard>,
+        children: [
+            {path:'/admin-dashboard/', element: <Overview></Overview>},
+            {path:'/admin-dashboard/services', element:<>Available Services</>},
+            {path:'/admin-dashboard/products', element:<>Available Products</>},
+            {path:'/admin-dashboard/team', element:<>Available Team Members</>},
+        ]
+    },
     { path: '*', element: <NotFoundPage></NotFoundPage> },
 ]);
 

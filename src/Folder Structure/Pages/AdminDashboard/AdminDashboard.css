@@ -15,4 +15,13 @@
 }
 .admin-dashboard .dashboard-container::-webkit-scrollbar {
   width: 0;
+}
+.admin-dashboard .dashboard-container .dashboard-main-body {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.admin-dashboard .dashboard-container .dashboard-main-body .navigation-panel {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
 }/*# sourceMappingURL=AdminDashboard.css.map */

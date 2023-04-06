@@ -1,0 +1,32 @@
+$primary-color: #FF3811;
+$text-primary: #151515;
+$text-secondary: #737373;
+$text-white: #fff;
+$text-2: #A2A2A2;
+$section-max-width: 1440px;
+$section-universal-padding: 9.375rem;
+$font-family-primary: Inter, sans-serif;
+$btn-hover-bg:#c71007;
+$border-basic: 1px solid #c8c8c8;
+
+.dashboard-overview{
+    .overview-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        .summery-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            border-radius: 10px;
+            width: 12rem;
+            height: 8rem;
+            border: 1px solid transparent;
+            background-color: #fff;
+        }
+    }
+}
