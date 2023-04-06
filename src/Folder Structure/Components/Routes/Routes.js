@@ -14,6 +14,8 @@ import ProductPage from "../../Pages/ProductPage/ProductPage";
 import AdminDashboard from "../../Pages/AdminDashboard/AdminDashboard";
 import Overview from "../../DashboardComponents/Overview/Overview";
 import AvailableProducts from "../../DashboardComponents/AvailableProducts/AvailableProducts";
+import AvailableServices from "../../DashboardComponents/AvailableServices/AvailableServices";
+import Manpower from "../../DashboardComponents/Manpower/Manpower";
 
 const router = createBrowserRouter([
     {
@@ -42,9 +44,9 @@ const router = createBrowserRouter([
         element: <AdminDashboard></AdminDashboard>,
         children: [
             {path:'/admin-dashboard/', element: <Overview></Overview>},
-            {path:'/admin-dashboard/services', element:<>Available Services</>},
+            {path:'/admin-dashboard/services', element:<AvailableServices></AvailableServices>},
             {path:'/admin-dashboard/products', element:<AvailableProducts></AvailableProducts>},
-            {path:'/admin-dashboard/team', element:<>Available Team Members</>},
+            {path:'/admin-dashboard/team', element:<Manpower></Manpower>},
         ]
     },
     { path: '*', element: <NotFoundPage></NotFoundPage> },

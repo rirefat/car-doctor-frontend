@@ -1,10 +1,10 @@
 import React from 'react';
 
-const AvailableProducts = () => {
+const AvailableServices = () => {
     return (
-        <div className='dashboard-products p-8'>
-            <h1 className='text-center text-2xl font-semibold mb-8'>Products At A Glance</h1>
-            <div className="products-container">
+        <div className='dashboard-services p-8'>
+            <h1 className='text-center text-2xl font-semibold mb-8'>Services At A Glance</h1>
+            <div className="services-container">
                 {
                     // summeryBoxex.map(summery => <div key={summery.id} className='summery-box shadow-xl'>
                     //     <img src={summery.icon} alt="Icon" className='mb-4' />
@@ -16,4 +16,4 @@ const AvailableProducts = () => {
     );
 };
 
-export default AvailableProducts;
+export default AvailableServices;
