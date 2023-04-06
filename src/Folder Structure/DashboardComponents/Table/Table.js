@@ -9,6 +9,9 @@ const Table = (props) => {
     const img = props.singleService?.img;
     const price = props.singleService?.price;
     const _id = props.singleService?._id;
+
+    const handleServiceDelete = props.handleServiceDelete;
+    
     return (
         <div className="overflow-x-auto w-full mb-2">
             <div className="overflow-x-auto w-full">
@@ -35,7 +38,7 @@ const Table = (props) => {
                             </td>
                             <th className='flex justify-end'>
                                 <button className="btn btn-circle btn-outline text-lg mx-3 hover:text-white"><RxUpdate></RxUpdate></button>
-                                <button className="btn btn-circle btn-outline text-lg mx-3 hover:text-white"><AiFillDelete></AiFillDelete></button>
+                                <button onClick={() => handleServiceDelete(_id)} className="btn btn-circle btn-outline text-lg mx-3 hover:text-white"><AiFillDelete></AiFillDelete></button>
                             </th>
                         </tr>
                     </tbody>
