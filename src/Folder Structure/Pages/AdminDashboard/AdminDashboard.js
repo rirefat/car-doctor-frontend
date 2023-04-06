@@ -7,6 +7,7 @@ import { BsFillBoxSeamFill, BsWrenchAdjustable } from 'react-icons/bs';
 import { RiTeamFill } from 'react-icons/ri';
 import { FiLogOut } from 'react-icons/fi';
 import { GrOverview } from 'react-icons/gr';
+import { HiShoppingCart } from 'react-icons/hi';
 
 const AdminDashboard = () => {
 
@@ -25,7 +26,8 @@ const AdminDashboard = () => {
                         <Link to={'/admin-dashboard'}><span className='icon'><GrOverview></GrOverview></span>Overview</Link>
                         <Link to={'/admin-dashboard/services'}><span className='icon'><BsWrenchAdjustable></BsWrenchAdjustable></span>Available Services</Link>
                         <Link to={'/admin-dashboard/products'}><span className='icon'><BsFillBoxSeamFill></BsFillBoxSeamFill></span> Available Products</Link>
-                        <Link to={'/admin-dashboard/team'}><span className='icon'><RiTeamFill></RiTeamFill></span>Available Team Members</Link>
+                        <Link to={'/admin-dashboard/team'}><span className='icon'><RiTeamFill></RiTeamFill></span>Team Members</Link>
+                        <Link to={'/admin-dashboard/team'}><span className='icon'><HiShoppingCart></HiShoppingCart></span>Orders</Link>
                     </div>
 
                     <div className="middle-panel">
