@@ -50,16 +50,26 @@
 }
 .admin-dashboard .dashboard-container .dashboard-main-body .admin-info-panel {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
 }
-.admin-dashboard .dashboard-container .dashboard-main-body .admin-info-panel .admin-img {
+.admin-dashboard .dashboard-container .dashboard-main-body .admin-info-panel .admin-container {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  margin-right: 0.5rem;
+  padding: 1rem 0;
+}
+.admin-dashboard .dashboard-container .dashboard-main-body .admin-info-panel .admin-container .admin-img {
   display: flex;
   justify-content: center;
   align-items: start;
 }
-.admin-dashboard .dashboard-container .dashboard-main-body .admin-info-panel .admin-img img {
+.admin-dashboard .dashboard-container .dashboard-main-body .admin-info-panel .admin-container .admin-img img {
   border-radius: 50%;
 }/*# sourceMappingURL=AdminDashboard.css.map */

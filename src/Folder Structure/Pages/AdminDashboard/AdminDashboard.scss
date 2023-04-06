@@ -6,40 +6,40 @@ $text-2: #A2A2A2;
 $section-max-width: 1440px;
 $section-universal-padding: 9.375rem;
 $font-family-primary: Inter, sans-serif;
-$btn-hover-bg:#c71007;
+$btn-hover-bg: #c71007;
 $border-basic: 1px solid #c8c8c8;
 
-.admin-dashboard{
+.admin-dashboard {
     max-width: $section-max-width;
     margin: 0 auto;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    .dashboard-container{
+
+    .dashboard-container {
         background-color: #f3f3ff;
         height: 92vh;
         width: 95vw;
         overflow-y: scroll;
         border-radius: 10px;
 
-        &::-webkit-scrollbar{
+        &::-webkit-scrollbar {
             width: 0;
         }
 
-        .dashboard-main-body{
+        .dashboard-main-body {
             display: grid;
             grid-template-columns: 1.5fr 4fr 0.5fr;
 
-            .navigation-panel{
+            .navigation-panel {
                 display: flex;
                 justify-content: start;
                 flex-direction: column;
                 gap: 0.5rem;
                 margin-top: 2rem;
 
-                a:not(.logo){
+                a:not(.logo) {
                     width: 100%;
                     background-color: #fff;
                     padding: 1rem;
@@ -52,33 +52,45 @@ $border-basic: 1px solid #c8c8c8;
                     justify-content: start;
                     align-items: center;
 
-                    .icon{
+                    .icon {
                         margin-right: 1rem;
                     }
 
-                    &:hover{
+                    &:hover {
                         background-color: #d5d6ff;
                     }
                 }
 
-                .logo{
+                .logo {
                     padding-left: 2rem;
                 }
             }
 
-            .admin-info-panel{
+            .admin-info-panel {
                 display: flex;
-                justify-content: center;
+                justify-content: start;
                 align-items: center;
                 flex-direction: column;
                 flex-wrap: wrap;
-                .admin-img{
+
+                .admin-container {
+                    background-color: #fff;
                     display: flex;
                     justify-content: center;
-                    align-items: start;
+                    align-items: center;
+                    flex-direction: column;
+                    border-radius: 10px;
+                    margin-right: 0.5rem;
+                    padding: 1rem 0;
 
-                    img{
-                        border-radius: 50%;
+                    .admin-img {
+                        display: flex;
+                        justify-content: center;
+                        align-items: start;
+
+                        img {
+                            border-radius: 50%;
+                        }
                     }
                 }
             }
