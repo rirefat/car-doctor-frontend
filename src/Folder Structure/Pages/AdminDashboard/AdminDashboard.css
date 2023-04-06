@@ -18,7 +18,7 @@
 }
 .admin-dashboard .dashboard-container .dashboard-main-body {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1.5fr 4fr 0.5fr;
 }
 .admin-dashboard .dashboard-container .dashboard-main-body .navigation-panel {
   display: flex;
@@ -47,4 +47,19 @@
 }
 .admin-dashboard .dashboard-container .dashboard-main-body .navigation-panel .logo {
   padding-left: 2rem;
+}
+.admin-dashboard .dashboard-container .dashboard-main-body .admin-info-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.admin-dashboard .dashboard-container .dashboard-main-body .admin-info-panel .admin-img {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.admin-dashboard .dashboard-container .dashboard-main-body .admin-info-panel .admin-img img {
+  border-radius: 50%;
 }/*# sourceMappingURL=AdminDashboard.css.map */

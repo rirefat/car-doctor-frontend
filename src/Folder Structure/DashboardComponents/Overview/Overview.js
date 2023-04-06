@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import productsIcon from '../../../../src/assets/icons/deliveryt.svg';
 import servicesIcon from '../../../../src/assets/icons/Wrench.svg';
 import manPowerIcon from '../../../../src/assets/icons/team.svg';
+import ordersIcon from '../../../../src/assets/icons/orders.png';
 
 const Overview = () => {
     const [services, setServices] = useState([]);
@@ -33,7 +34,7 @@ const Overview = () => {
         { id: 1, icon: productsIcon, name: "Total Products", info: products.length },
         { id: 2, icon: servicesIcon, name: "All Services", info: services.length },
         { id: 3, icon: manPowerIcon, name: "Manpower", info: team.length },
-        // { id: 4, icon: manPowerIcon, name: "Orders", info: team.length },
+        { id: 4, icon: ordersIcon, name: "Orders", info: 10 },
     ];
 
     return (
