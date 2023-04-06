@@ -13,6 +13,7 @@ import Contact from "../../Pages/Contact/Contact";
 import ProductPage from "../../Pages/ProductPage/ProductPage";
 import AdminDashboard from "../../Pages/AdminDashboard/AdminDashboard";
 import Overview from "../../DashboardComponents/Overview/Overview";
+import AvailableProducts from "../../DashboardComponents/AvailableProducts/AvailableProducts";
 
 const router = createBrowserRouter([
     {
@@ -42,7 +43,7 @@ const router = createBrowserRouter([
         children: [
             {path:'/admin-dashboard/', element: <Overview></Overview>},
             {path:'/admin-dashboard/services', element:<>Available Services</>},
-            {path:'/admin-dashboard/products', element:<>Available Products</>},
+            {path:'/admin-dashboard/products', element:<AvailableProducts></AvailableProducts>},
             {path:'/admin-dashboard/team', element:<>Available Team Members</>},
         ]
     },
