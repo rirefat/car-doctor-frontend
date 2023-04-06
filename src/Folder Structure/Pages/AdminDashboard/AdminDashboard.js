@@ -27,7 +27,7 @@ const AdminDashboard = () => {
                         <Link to={'/admin-dashboard/services'}><span className='icon'><BsWrenchAdjustable></BsWrenchAdjustable></span>Available Services</Link>
                         <Link to={'/admin-dashboard/products'}><span className='icon'><BsFillBoxSeamFill></BsFillBoxSeamFill></span> Available Products</Link>
                         <Link to={'/admin-dashboard/team'}><span className='icon'><RiTeamFill></RiTeamFill></span>Team Members</Link>
-                        <Link to={'/admin-dashboard/team'}><span className='icon'><HiShoppingCart></HiShoppingCart></span>Orders</Link>
+                        <Link to={'/admin-dashboard/orders'}><span className='icon'><HiShoppingCart></HiShoppingCart></span>Orders</Link>
                     </div>
 
                     <div className="middle-panel">

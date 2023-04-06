@@ -7,22 +7,28 @@ import { ToastContainer, toast } from 'react-toastify';
 const AvailableServices = () => {
     const notify = () => toast("Deleted Successfully!");
     const availableServices = useLoaderData();
-    const [updatedServices, setUpdatedServices]=useState(availableServices);    
+    const [updatedServices, setUpdatedServices] = useState(availableServices);
 
     // Handler for deleting single service
     const handleServiceDelete = (id) => {
-        fetch(`http://localhost:5000/services/${id}`, {
-            method: "DELETE",
-            headers: {
-                "Content-type": "application/json"
-            }
-        })
-            .then(res => res.json())
-            .then(data => {
-                const newServices = availableServices.filter(service=> service._id !== id);
-                setUpdatedServices(newServices);
-                notify();
+        const agree = window.confirm("Are you sure to delete?");
+        if (agree) {
+            fetch(`http://localhost:5000/services/${id}`, {
+                method: "DELETE",
+                headers: {
+                    "Content-type": "application/json"
+                }
             })
+                .then(res => res.json())
+                .then(data => {
+                    const newServices = availableServices.filter(service => service._id !== id);
+                    setUpdatedServices(newServices);
+                    notify();
+                })
+        }
+        else{
+            window.confirm("Request Denied.");
+        }
     }
 
     return (

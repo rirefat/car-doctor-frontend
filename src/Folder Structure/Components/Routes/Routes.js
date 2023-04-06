@@ -17,6 +17,7 @@ import AvailableProducts from "../../DashboardComponents/AvailableProducts/Avail
 import AvailableServices from "../../DashboardComponents/AvailableServices/AvailableServices";
 import Manpower from "../../DashboardComponents/Manpower/Manpower";
 import AddProduct from "../../Pages/AddProduct/AddProduct";
+import Orders from "../../DashboardComponents/Orders/Orders";
 
 const router = createBrowserRouter([
     {
@@ -61,6 +62,7 @@ const router = createBrowserRouter([
                 element: <Manpower></Manpower>,
                 loader: () => fetch("http://localhost:5000/team")
             },
+            {path: '/admin-dashboard/orders', element: <Orders></Orders>},
         ]
     },
     { path: '*', element: <NotFoundPage></NotFoundPage> },
