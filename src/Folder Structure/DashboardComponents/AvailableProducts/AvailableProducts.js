@@ -3,8 +3,10 @@ import { IoMdAdd } from 'react-icons/io';
 import { AiFillDelete } from 'react-icons/ai';
 import { RxUpdate } from 'react-icons/rx';
 import { Link, useLoaderData } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
 
 const AvailableProducts = () => {
+    const notify = () => toast("Deleted Successfully!");
     const availableProducts = useLoaderData();
     const [displayedProducts, setDisplayedProducts]=useState(availableProducts);
 
@@ -21,7 +23,7 @@ const AvailableProducts = () => {
                 .then(data=>{
                     const newSet = availableProducts.filter(product => product._id !== id);
                     setDisplayedProducts(newSet)
-                    alert("deleted")
+                    notify();
                 })
         }
         else{
@@ -78,6 +80,7 @@ const AvailableProducts = () => {
                     </div>)
                 }
             </div>
+            <ToastContainer />
         </div>
     );
 };
