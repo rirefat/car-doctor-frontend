@@ -39,7 +39,7 @@ const Overview = () => {
 
     return (
         <div className='dashboard-overview p-8'>
-            <h1 className='text-center text-2xl font-semibold mb-8'>Overview At A Glance</h1>
+            <h1 className='text-center text-2xl font-semibold mb-8'><span className='text-primary-color'>Overview</span> At A Glance</h1>
             <div className="overview-container">
                 {
                     summeryBoxex.map(summery => <div key={summery.id} className='summery-box shadow-xl'>
