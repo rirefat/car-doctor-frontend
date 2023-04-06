@@ -1,18 +1,56 @@
 import React from 'react';
+import { IoMdAdd } from 'react-icons/io';
+import { AiFillDelete } from 'react-icons/ai';
+import { RxUpdate } from 'react-icons/rx';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const AvailableProducts = () => {
+    const availableProducts = useLoaderData();
     return (
         <div className='dashboard-products p-8'>
-            <h1 className='text-center text-2xl font-semibold mb-8'>Products At A Glance</h1>
-            <div className="products-summery">
-                <p>Total Products: </p>
+            <h1 className='text-center text-2xl font-semibold mb-8'><span className='text-primary-color'>Products</span> At A Glance</h1>
+
+            <div className="products-summery flex justify-between items-center p-4 border-b-2 border-stone-300 mb-4">
+                <p className='text-xl font-medium'>All Products: {availableProducts.length}</p>
+                <button className="shadow-xl btn btn-square btn-outline text-2xl hover:text-white"><IoMdAdd></IoMdAdd></button>
             </div>
+
             <div className="products-container">
                 {
-                    // summeryBoxex.map(summery => <div key={summery.id} className='summery-box shadow-xl'>
-                    //     <img src={summery.icon} alt="Icon" className='mb-4' />
-                    //     <p className='font-medium'>{summery.name}: {summery.info?summery.info:"0"}</p>
-                    // </div>)
+                    availableProducts.map(singleProduct => <div key={singleProduct._id}>
+                        <div className="overflow-x-auto w-full mb-2">
+                            <div className="overflow-x-auto w-full">
+                                <table className="table w-full">
+                                    <tbody>
+                                        <tr>
+                                            <td className='w-1/2'>
+                                                <div className="flex items-center space-x-3">
+                                                    <div className="avatar">
+                                                        <div className="mask mask-squircle w-12 h-12">
+                                                            <img src={singleProduct.img} alt="Avatar Tailwind CSS Component" />
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div className="font-bold">{singleProduct.name}</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td className='w-2'>
+                                                <p className='font-semibold'>$ {singleProduct.price}</p>
+                                            </td>
+                                            <td>
+                                                {/* <Link to={`/service-details/${_id}`}><button className="btn btn-ghost btn-xs">Details</button></Link> */}
+                                            </td>
+                                            <th className='flex justify-end'>
+                                                <button className="btn btn-circle btn-outline text-lg mx-3 hover:text-white"><RxUpdate></RxUpdate></button>
+                                                <button className="btn btn-circle btn-outline text-lg mx-3 hover:text-white"><AiFillDelete></AiFillDelete></button>
+                                            </th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>)
                 }
             </div>
         </div>

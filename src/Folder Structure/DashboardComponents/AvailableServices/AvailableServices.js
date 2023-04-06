@@ -8,9 +8,9 @@ const AvailableServices = () => {
     console.log(availableServices.length)
     return (
         <div className='dashboard-services p-8'>
-            <h1 className='text-center text-2xl font-semibold mb-8'>Services At A Glance</h1>
+            <h1 className='text-center text-2xl font-semibold mb-8'><span className='text-primary-color'>Services</span> At A Glance</h1>
 
-            <div className="products-summery flex justify-between items-center p-4 border-b-2 border-stone-300 mb-4">
+            <div className="services-summery flex justify-between items-center p-4 border-b-2 border-stone-300 mb-4">
                 <p className='text-xl font-medium'>All Services: {availableServices.length}</p>
                 <button className="shadow-xl btn btn-square btn-outline text-2xl hover:text-white"><IoMdAdd></IoMdAdd></button>
             </div>

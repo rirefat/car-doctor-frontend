@@ -3,7 +3,7 @@ import React from 'react';
 const Manpower = () => {
     return (
         <div className='dashboard-manpower p-8'>
-            <h1 className='text-center text-2xl font-semibold mb-8'>Our Manpower</h1>
+            <h1 className='text-center text-2xl font-semibold mb-8'>Our <span className='text-primary-color'>Manpower</span></h1>
             <div className="manpower-container">
                 {
                     // summeryBoxex.map(summery => <div key={summery.id} className='summery-box shadow-xl'>
