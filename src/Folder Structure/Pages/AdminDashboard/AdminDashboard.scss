@@ -36,6 +36,34 @@ $border-basic: 1px solid #c8c8c8;
                 display: flex;
                 justify-content: start;
                 flex-direction: column;
+                gap: 0.5rem;
+                margin-top: 2rem;
+
+                a:not(.logo){
+                    width: 100%;
+                    background-color: #fff;
+                    padding: 1rem;
+                    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                    border-radius: 0 10px 10px 0;
+                    cursor: pointer;
+                    font-weight: 500;
+
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+
+                    .icon{
+                        margin-right: 1rem;
+                    }
+
+                    &:hover{
+                        background-color: #d5d6ff;
+                    }
+                }
+
+                .logo{
+                    padding-left: 2rem;
+                }
             }
         }
     }
