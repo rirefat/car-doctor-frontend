@@ -2,6 +2,7 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 
 const UpdateService = () => {
+    const notify = () => toast("Successfully Updated!");
     const service = useLoaderData();
 
     const handleUpdateService = (event) => {
@@ -23,7 +24,7 @@ const UpdateService = () => {
             })
             .then(res=>res.json())
             .then(data=>{
-                window.alert("Updated successfully.");
+                notify();
             })
         }
         else {
@@ -44,6 +45,7 @@ const UpdateService = () => {
                 <textarea defaultValue={service.description} name='description' required placeholder="Product Description" className="input-bordered textarea textarea-lg w-full" ></textarea>
                 <button className="btn add-product-form-btn shadow-md w-full mt-6 bg-primary-color border-transparent">Update Service</button>
             </form>
+            <ToastContainer />
         </div>
     );
 };
