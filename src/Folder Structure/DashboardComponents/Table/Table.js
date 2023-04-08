@@ -37,7 +37,7 @@ const Table = (props) => {
                                 <Link to={`/service-details/${_id}`}><button className="btn btn-ghost btn-xs">Details</button></Link>
                             </td>
                             <th className='flex justify-end'>
-                                <button className="btn btn-circle btn-outline text-lg mx-3 hover:text-white"><RxUpdate></RxUpdate></button>
+                            <Link to={`/admin-dashboard/update-service/${_id}`}><button className="btn btn-circle btn-outline text-lg mx-3 hover:text-white"><RxUpdate></RxUpdate></button></Link> 
                                 <button onClick={() => handleServiceDelete(_id)} className="btn btn-circle btn-outline text-lg mx-3 hover:text-white"><AiFillDelete></AiFillDelete></button>
                             </th>
                         </tr>

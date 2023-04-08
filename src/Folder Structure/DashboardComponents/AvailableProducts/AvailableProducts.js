@@ -8,30 +8,38 @@ import { ToastContainer, toast } from 'react-toastify';
 const AvailableProducts = () => {
     const notify = () => toast("Deleted Successfully!");
     const availableProducts = useLoaderData();
-    const [displayedProducts, setDisplayedProducts]=useState(availableProducts);
+    const [displayedProducts, setDisplayedProducts] = useState(availableProducts);
 
-    const handleDeleteProduct=(id)=>{
+    const handleDeleteProduct = (id) => {
         const agree = window.confirm("Are you sure to delete?");
-        if(agree){
-            fetch(`http://localhost:5000/products/${id}`,{
+        if (agree) {
+            fetch(`http://localhost:5000/products/${id}`, {
                 method: "DELETE",
                 headers: {
                     'content-type': 'applicaion/json',
                 }
             })
-                .then(res=>res.json())
-                .then(data=>{
+                .then(res => res.json())
+                .then(data => {
                     const newSet = availableProducts.filter(product => product._id !== id);
                     setDisplayedProducts(newSet)
                     notify();
                 })
         }
-        else{
+        else {
             window.confirm("Request denied.");
         }
     }
 
-    const handleUpdateProduct=(id)=>{}
+    const handleUpdateProduct = (id) => {
+        // const agree = window.confirm("Do you want to update?");
+        // if (agree) {
+
+        // }
+        // else {
+        //     alert("Request Denied.")
+        // }
+    }
 
     return (
         <div className='dashboard-products p-8'>
@@ -69,8 +77,8 @@ const AvailableProducts = () => {
                                                 {/* <Link to={`/service-details/${_id}`}><button className="btn btn-ghost btn-xs">Details</button></Link> */}
                                             </td>
                                             <th className='flex justify-end'>
-                                                <button onClick={()=>handleUpdateProduct(singleProduct._id)} className="btn btn-circle btn-outline text-lg mx-3 hover:text-white"><RxUpdate></RxUpdate></button>
-                                                <button onClick={()=>handleDeleteProduct(singleProduct._id)} className="btn btn-circle btn-outline text-lg mx-3 hover:text-white"><AiFillDelete></AiFillDelete></button>
+                                                <Link to={`/admin-dashboard/update-product/${singleProduct._id}`}><button className="btn btn-circle btn-outline text-lg mx-3 hover:text-white"><RxUpdate></RxUpdate></button></Link>                                                
+                                                <button onClick={() => handleDeleteProduct(singleProduct._id)} className="btn btn-circle btn-outline text-lg mx-3 hover:text-white"><AiFillDelete></AiFillDelete></button>
                                             </th>
                                         </tr>
                                     </tbody>
@@ -80,6 +88,7 @@ const AvailableProducts = () => {
                     </div>)
                 }
             </div>
+            {/* Toast Container */}
             <ToastContainer />
         </div>
     );
