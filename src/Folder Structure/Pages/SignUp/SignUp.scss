@@ -48,13 +48,17 @@ $btn-hover-bg:#c71007;
                     background-color: #EEEEF1;
                     border-radius: 50%;
                     padding: 0.5rem;
+
+                    &:hover{
+                        background-color: #d8d9df;
+                    }
                 }
 
                 .facebook{
                     color: #315090;
                 }
-                .linkedin{
-                    color: #006EAB;
+                .twitter{
+                    color: #00ACEE;
                 }
             }
             .navigate-login-link {

@@ -33,7 +33,7 @@ const Navbar = () => {
             <div className="navbar-end">
                 <Link className='navbar-icon' to={'/cart'}><BsHandbag></BsHandbag></Link>
                 <Link className='navbar-icon' to={'/search'}><BsSearch></BsSearch></Link>
-                <Link to={'/contact'}><button className="btn btn-outline shadow-md">Appointment</button></Link>
+                <Link to={'/sign-up'}><button className="btn btn-outline shadow-md">Sign Up</button></Link>
             </div>
             <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">

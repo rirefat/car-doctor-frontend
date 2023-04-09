@@ -1,15 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './SignUp.css';
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import app from '../../../firebase.config';
+
 import Navbar from '../../Shared/Navbar/Navbar';
 import logiinImg from '../../../assets/images/login/login.svg';
 
 import { FcGoogle } from 'react-icons/fc';
 import { ImFacebook } from 'react-icons/im';
-import { GrLinkedinOption } from 'react-icons/gr';
+import { BsTwitter } from 'react-icons/bs';
 
 
 const SignUp = () => {
+    const [user, setUser] = useState({});
+
+    const auth = getAuth(app);
+    const googleProvider = new GoogleAuthProvider();
+
+    const googleSignIn = () => {
+        signInWithPopup(auth, googleProvider)
+            .then((result) => {
+                const credential = GoogleAuthProvider.credentialFromResult(result);
+                const token = credential.accessToken;
+                const user = result.user;
+                setUser(user);
+                console.log(user)
+            }).catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                const email = error.customData.email;
+                const credential = GoogleAuthProvider.credentialFromError(error);
+            });
+    }
+
     return (
         <div className='sign-up'>
             <Navbar></Navbar>
@@ -49,8 +73,8 @@ const SignUp = () => {
 
                     <div className="social-sign-up my-5">
                         <Link className='link facebook' to={'/'}><ImFacebook></ImFacebook></Link>
-                        <Link className='link linkedin' to={'/'}><GrLinkedinOption></GrLinkedinOption></Link>                        
-                        <Link className='link google' to={'/'}><FcGoogle></FcGoogle></Link>
+                        <Link className='link twitter' to={'/'}><BsTwitter></BsTwitter></Link>
+                        <Link className='link google' onClick={googleSignIn}><FcGoogle></FcGoogle></Link>
                     </div>
                     <p className='text-center mt-10 text-gray-500'>Already have an account? <Link className='text-primary-color' to={'/login'}>Login</Link></p>
                 </div>
