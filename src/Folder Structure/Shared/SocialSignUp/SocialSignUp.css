@@ -1,0 +1,21 @@
+.social-sign-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-sign-up .link {
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  background-color: #EEEEF1;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+.social-sign-up .link:hover {
+  background-color: #d8d9df;
+}
+.social-sign-up .facebook {
+  color: #315090;
+}
+.social-sign-up .twitter {
+  color: #00ACEE;
+}/*# sourceMappingURL=SocialSignUp.css.map */

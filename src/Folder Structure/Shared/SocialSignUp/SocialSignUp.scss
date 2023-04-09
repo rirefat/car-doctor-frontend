@@ -1,0 +1,24 @@
+.social-sign-up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .link{
+        margin: 0 1rem;
+        font-size: 1.5rem;
+        background-color: #EEEEF1;
+        border-radius: 50%;
+        padding: 0.5rem;
+
+        &:hover{
+            background-color: #d8d9df;
+        }
+    }
+
+    .facebook{
+        color: #315090;
+    }
+    .twitter{
+        color: #00ACEE;
+    }
+}

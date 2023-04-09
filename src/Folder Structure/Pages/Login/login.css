@@ -23,24 +23,6 @@
 .login .login-container .right-section form .btn:hover {
   background-color: #c71007;
 }
-.login .login-container .right-section .social-login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.login .login-container .right-section .social-login .link {
-  margin: 0 1rem;
-  font-size: 1.5rem;
-  background-color: #EEEEF1;
-  border-radius: 50%;
-  padding: 0.5rem;
-}
-.login .login-container .right-section .social-login .facebook {
-  color: #315090;
-}
-.login .login-container .right-section .social-login .linkedin {
-  color: #006EAB;
-}
 .login .login-container .right-section .navigate-login-link a {
   color: #FF3811;
 }

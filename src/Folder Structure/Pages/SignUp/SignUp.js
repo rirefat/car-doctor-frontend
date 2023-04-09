@@ -10,29 +10,10 @@ import logiinImg from '../../../assets/images/login/login.svg';
 import { FcGoogle } from 'react-icons/fc';
 import { ImFacebook } from 'react-icons/im';
 import { BsTwitter } from 'react-icons/bs';
+import SocialSignUp from '../../Shared/SocialSignUp/SocialSignUp';
 
 
 const SignUp = () => {
-    const [user, setUser] = useState({});
-
-    const auth = getAuth(app);
-    const googleProvider = new GoogleAuthProvider();
-
-    const googleSignIn = () => {
-        signInWithPopup(auth, googleProvider)
-            .then((result) => {
-                const credential = GoogleAuthProvider.credentialFromResult(result);
-                const token = credential.accessToken;
-                const user = result.user;
-                setUser(user);
-                console.log(user)
-            }).catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                const email = error.customData.email;
-                const credential = GoogleAuthProvider.credentialFromError(error);
-            });
-    }
 
     return (
         <div className='sign-up'>
@@ -57,7 +38,7 @@ const SignUp = () => {
                         <label className="label">
                             <span className="label-text font-base text-base">Your Password</span>
                         </label>
-                        <input type="password" placeholder="Name" className="input input-bordered w-full max-w-100 mb-3" />
+                        <input type="password" placeholder="Password" className="input input-bordered w-full max-w-100 mb-3" />
 
                         <label className="label">
                             <span className="label-text font-base text-base">Confirm Password</span>
@@ -71,12 +52,8 @@ const SignUp = () => {
                         <div className="divider">OR</div>
                     </div>
 
-                    <div className="social-sign-up my-5">
-                        <Link className='link facebook' to={'/'}><ImFacebook></ImFacebook></Link>
-                        <Link className='link twitter' to={'/'}><BsTwitter></BsTwitter></Link>
-                        <Link className='link google' onClick={googleSignIn}><FcGoogle></FcGoogle></Link>
-                    </div>
-                    <p className='text-center mt-10 text-gray-500'>Already have an account? <Link className='text-primary-color' to={'/login'}>Login</Link></p>
+                    <SocialSignUp></SocialSignUp>
+                    <p className='text-center mt-10 text-gray-500'>Already have an account? <Link className='text-primary-color hover:font-bold' to={'/login'}>Login</Link></p>
                 </div>
             </div>
         </div>
