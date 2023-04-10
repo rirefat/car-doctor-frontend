@@ -5,8 +5,31 @@ import { Link } from 'react-router-dom';
 import './login.css';
 
 import SocialSignUp from '../../Shared/SocialSignUp/SocialSignUp';
+import app from '../../../firebase.config';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
 const Login = () => {
+    const auth = getAuth(app);
+
+    const handleLogin = (event) => {
+        event.preventDefault();
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                alert("log in successfully!");
+                console.log(user);
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert("Wrong Credentials");
+                event.target.reset();
+            });
+    }
+
     return (
         <div className='login'>
             <Navbar></Navbar>
@@ -15,18 +38,18 @@ const Login = () => {
                     <img src={logiinImg} alt="" />
                 </div>
                 <div className="right-section">
-                    <form >
+                    <form onSubmit={handleLogin}>
                         <h2 className='text-center text-4xl mb-5' >Login</h2>
 
                         <label className="label">
                             <span className="label-text font-base text-base">What is your email?</span>
                         </label>
-                        <input type="email" placeholder="Email" className="input input-bordered w-full max-w-100 mb-3" />
+                        <input name='email' type="email" placeholder="Email" className="input input-bordered w-full max-w-100 mb-3" />
 
                         <label className="label">
                             <span className="label-text font-base text-base">Your Password</span>
                         </label>
-                        <input type="password" placeholder="Password" className="input input-bordered w-full max-w-100 mb-3" />
+                        <input name='password' type="password" placeholder="Password" className="input input-bordered w-full max-w-100 mb-3" />
 
                         <button className="btn btn-outline shadow-md w-full my-5">Login</button>
                     </form>
