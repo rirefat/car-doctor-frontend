@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../../Shared/Navbar/Navbar';
 import logiinImg from '../../../assets/images/login/login.svg';
 import { Link } from 'react-router-dom';
@@ -6,20 +6,23 @@ import './login.css';
 
 import SocialSignUp from '../../Shared/SocialSignUp/SocialSignUp';
 import app from '../../../firebase.config';
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, sendPasswordResetEmail, signInWithEmailAndPassword } from 'firebase/auth';
 
 const Login = () => {
+    const [email, setEmail] = useState('');
     const auth = getAuth(app);
 
     const handleLogin = (event) => {
         event.preventDefault();
         const email = event.target.email.value;
         const password = event.target.password.value;
+        setEmail(email);
 
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
                 alert("log in successfully!");
+                event.target.reset();
                 console.log(user);
             })
             .catch((error) => {
@@ -29,6 +32,33 @@ const Login = () => {
                 event.target.reset();
             });
     }
+
+
+    const getEmail = (event) => {
+        event.preventDefault();
+        const mail = event.target.value;
+        setEmail(mail);
+    }
+
+
+    const resetPassword = () => {
+        if (!email) {
+            alert("Please provide your email")
+        }
+        else {
+            sendPasswordResetEmail(auth, email)
+                .then(() => {
+                    alert("Check your email to reset password.")
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    alert("Request Failed!")
+                });
+        }
+
+    }
+
 
     return (
         <div className='login'>
@@ -44,7 +74,7 @@ const Login = () => {
                         <label className="label">
                             <span className="label-text font-base text-base">What is your email?</span>
                         </label>
-                        <input name='email' type="email" placeholder="Email" className="input input-bordered w-full max-w-100 mb-3" />
+                        <input onBlur={getEmail} name='email' type="email" placeholder="Email" className="input input-bordered w-full max-w-100 mb-3" />
 
                         <label className="label">
                             <span className="label-text font-base text-base">Your Password</span>
@@ -53,7 +83,7 @@ const Login = () => {
 
                         <button className="btn btn-outline shadow-md w-full my-5">Login</button>
                     </form>
-                    <p className='my-2 text-gray-500'>Forget Your Password? <Link className='text-primary-color hover:font-bold' >Reset</Link></p>
+                    <p className='my-2 text-gray-500'>Forget Your Password? <Link className='text-primary-color hover:font-bold' onClick={resetPassword}>Reset</Link></p>
 
                     <div className="flex flex-col w-full border-opacity-50">
                         <div className="divider">OR</div>
