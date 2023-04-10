@@ -4,9 +4,6 @@ import logiinImg from '../../../assets/images/login/login.svg';
 import { Link } from 'react-router-dom';
 import './login.css';
 
-import { FcGoogle } from 'react-icons/fc';
-import { ImFacebook } from 'react-icons/im';
-import { GrLinkedinOption } from 'react-icons/gr';
 import SocialSignUp from '../../Shared/SocialSignUp/SocialSignUp';
 
 const Login = () => {
@@ -33,7 +30,7 @@ const Login = () => {
 
                         <button className="btn btn-outline shadow-md w-full my-5">Login</button>
                     </form>
-                    <p className='my-2 text-gray-500'>Fotget Your Password? <Link className='text-primary-color hover:font-bold' >Reset</Link></p>
+                    <p className='my-2 text-gray-500'>Forget Your Password? <Link className='text-primary-color hover:font-bold' >Reset</Link></p>
 
                     <div className="flex flex-col w-full border-opacity-50">
                         <div className="divider">OR</div>
