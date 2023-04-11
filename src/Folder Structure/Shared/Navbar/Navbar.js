@@ -48,20 +48,21 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 <Link className='navbar-icon' to={'/cart'}><BsHandbag></BsHandbag></Link>
-                <Link className='navbar-icon' to={'/search'}><BsSearch></BsSearch></Link>
                 {
                     (user?.uid) ?
                         <div className="dropdown dropdown-end">
                             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                                 <div className="w-10 rounded-full">
-                                    <img src={user?.photoURL ? user?.photoURL : userImg} className='shadow-lg border-solid border-2 border-gray-400 rounded-full' />
+                                    <img src={user?.photoURL ? user.photoURL : userImg} className='shadow-lg border-solid border-2 border-gray-400 rounded-full' />
                                 </div>
                             </label>
                             <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                                <li><span className='text-primary-color font-semibold'>Welcome {user?.displayName}</span></li>
                                 <li>
-                                    <a className="justify-between">Profile</a>
+                                    <Link to={'/user-profile'} className="justify-between">Profile</Link>
                                 </li>
-                                <li><a>Settings</a></li>
+                                <li><Link to={'/cart'}>Cart</Link></li>
+                                <li><Link to={'/orders'}>Orders</Link></li>
                                 <li>
                                     <Link onClick={handleLogOut}>Log Out</Link>
                                 </li>

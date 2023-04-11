@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import './SocialSignUp.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import app from '../../../firebase.config';
 
@@ -10,7 +10,8 @@ import { BsTwitter } from 'react-icons/bs';
 import { AuthContext } from '../../Contexts/UserContext';
 
 const SocialSignUp = () => {
-    const {googleReg} = useContext(AuthContext)
+    const {googleReg} = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const googleSignIn = () => {
         googleReg()
@@ -18,6 +19,7 @@ const SocialSignUp = () => {
                 const credential = GoogleAuthProvider.credentialFromResult(result);
                 const token = credential.accessToken;
                 const user = result.user;
+                navigate('/');
             }).catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;

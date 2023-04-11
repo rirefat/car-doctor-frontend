@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './SignUp.css';
 import { getAuth, updateProfile, sendEmailVerification } from "firebase/auth";
 import Navbar from '../../Shared/Navbar/Navbar';
@@ -11,10 +11,9 @@ import { AuthContext } from '../../Contexts/UserContext';
 
 
 const SignUp = () => {
-    const [user, setUser] = useState({});
     const [userName, setUserName] = useState('');
     const auth = getAuth(app);
-
+    const navigate = useNavigate();
     const {createUserByEmail} = useContext(AuthContext);
 
     const handleRegister = (event) => {
@@ -28,10 +27,10 @@ const SignUp = () => {
             createUserByEmail(email, pass)
                 .then((userCredential) => {
                     const user = userCredential.user;
-                    setUser(user);
                     updateUserInfo();
                     sendVerificationMail();
                     alert("Please check your email and confirm your password.");
+                    navigate('/');
                     event.target.reset();
                     console.log(user);
                 })
