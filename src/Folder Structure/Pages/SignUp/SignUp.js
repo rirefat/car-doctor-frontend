@@ -1,18 +1,21 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './SignUp.css';
-import { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification } from "firebase/auth";
+import { getAuth, updateProfile, sendEmailVerification } from "firebase/auth";
 import Navbar from '../../Shared/Navbar/Navbar';
 import logiinImg from '../../../assets/images/login/login.svg';
 
 import SocialSignUp from '../../Shared/SocialSignUp/SocialSignUp';
 import app from '../../../firebase.config';
+import { AuthContext } from '../../Contexts/UserContext';
 
 
 const SignUp = () => {
     const [user, setUser] = useState({});
     const [userName, setUserName] = useState('');
     const auth = getAuth(app);
+
+    const {createUserByEmail} = useContext(AuthContext);
 
     const handleRegister = (event) => {
         event.preventDefault();
@@ -22,13 +25,14 @@ const SignUp = () => {
         const confirmPass = event.target.confirmPass.value;
 
         if (pass === confirmPass) {
-            createUserWithEmailAndPassword(auth, email, pass)
+            createUserByEmail(email, pass)
                 .then((userCredential) => {
                     const user = userCredential.user;
                     setUser(user);
                     updateUserInfo();
                     sendVerificationMail();
-                    alert("Please check your email and confirm your password.")
+                    alert("Please check your email and confirm your password.");
+                    event.target.reset();
                     console.log(user);
                 })
                 .catch((error) => {

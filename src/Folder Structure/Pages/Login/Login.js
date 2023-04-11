@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Navbar from '../../Shared/Navbar/Navbar';
 import logiinImg from '../../../assets/images/login/login.svg';
 import { Link } from 'react-router-dom';
@@ -7,10 +7,13 @@ import './login.css';
 import SocialSignUp from '../../Shared/SocialSignUp/SocialSignUp';
 import app from '../../../firebase.config';
 import { getAuth, sendPasswordResetEmail, signInWithEmailAndPassword } from 'firebase/auth';
+import { AuthContext } from '../../Contexts/UserContext';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const auth = getAuth(app);
+
+    const {login} = useContext(AuthContext);
 
     const handleLogin = (event) => {
         event.preventDefault();
@@ -18,7 +21,7 @@ const Login = () => {
         const password = event.target.password.value;
         setEmail(email);
 
-        signInWithEmailAndPassword(auth, email, password)
+        login(email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
                 alert("log in successfully!");
