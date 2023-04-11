@@ -1,32 +1,33 @@
 import React, { useContext } from 'react';
 import './Navbar.css'
 import logo from '../../../assets/logo.svg';
+import userImg from '../../../assets/images/User-Profile-PNG.png';
 import { Link } from 'react-router-dom';
 import { BsHandbag, BsSearch } from 'react-icons/bs';
 import { AuthContext } from '../../Contexts/UserContext';
 
 
 const Navbar = () => {
-    const {user, logOut}=useContext(AuthContext);
-    const navLinks = 
-    <>
-        <li><Link to="/home">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/services">Services</Link></li>
-        <li><Link to="/Products">Products</Link></li>
-        <li><Link to="/blog">Blog</Link></li>
-    </>
+    const { user, logOut } = useContext(AuthContext);
+    const navLinks =
+        <>
+            <li><Link to="/home">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/services">Services</Link></li>
+            <li><Link to="/Products">Products</Link></li>
+            <li><Link to="/blog">Blog</Link></li>
+        </>
 
-    const handleLogOut =()=>{
+    const handleLogOut = () => {
         logOut()
-        .then(()=>{
-            console.log("logout");
-        })
-        .catch((error) => {
-            console.error(error);
-          });
+            .then(() => {
+                console.log("logout");
+            })
+            .catch((error) => {
+                console.error(error);
+            });
     }
-    
+
     return (
         <div className="navbar bg-base-100">
             <div className="navbar-start">
@@ -49,11 +50,42 @@ const Navbar = () => {
                 <Link className='navbar-icon' to={'/cart'}><BsHandbag></BsHandbag></Link>
                 <Link className='navbar-icon' to={'/search'}><BsSearch></BsSearch></Link>
                 {
-                    (user?.uid) ? 
-                    <Link onClick={handleLogOut}><button className="btn btn-outline shadow-md">Log Out</button></Link> :
-                    <Link to={'/sign-up'}><button className="btn btn-outline shadow-md">Sign Up</button></Link>
-                }        
-                
+                    (user?.uid) ?
+                        <div className="dropdown dropdown-end">
+                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                <div className="w-10 rounded-full">
+                                    <img src={user?.photoURL ? user?.photoURL : userImg} className='shadow-lg border-solid border-2 border-gray-400 rounded-full' />
+                                </div>
+                            </label>
+                            <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                                <li>
+                                    <a className="justify-between">Profile</a>
+                                </li>
+                                <li><a>Settings</a></li>
+                                <li>
+                                    <Link onClick={handleLogOut}>Log Out</Link>
+                                </li>
+                            </ul>
+                        </div> :
+                        <Link to={'/sign-up'}><button className="btn btn-outline shadow-md">Sign Up</button></Link>
+                }
+                {/* <div className="dropdown dropdown-end">
+                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                        <div className="w-10 rounded-full">
+                            <img src={user?.photoURL ? user?.photoURL : userImg} className='shadow-lg border-solid border-2 border-gray-400 rounded-full' />
+                        </div>
+                    </label>
+                    <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                        <li>
+                            <a className="justify-between">Profile</a>
+                        </li>
+                        <li><a>Settings</a></li>
+                        <li>
+                            <Link onClick={handleLogOut}><button className="btn btn-outline shadow-md">Log Out</button></Link>
+                        </li>
+                    </ul>
+                </div> */}
+
             </div>
             <div className="dropdown">
                 <label tabIndex={0} className="btn btn-ghost lg:hidden">
