@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import Navbar from '../../Shared/Navbar/Navbar';
 import logiinImg from '../../../assets/images/login/login.svg';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './login.css';
 
 import SocialSignUp from '../../Shared/SocialSignUp/SocialSignUp';
@@ -13,6 +13,10 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const auth = getAuth(app);
     const navigate = useNavigate();
+
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+    
     const {login} = useContext(AuthContext);
 
     const handleLogin = (event) => {
@@ -24,7 +28,7 @@ const Login = () => {
         login(email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
-                navigate('/')
+                navigate(from, {replace: true})
                 event.target.reset();
                 console.log(user);
             })

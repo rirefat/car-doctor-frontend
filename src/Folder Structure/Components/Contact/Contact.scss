@@ -11,6 +11,7 @@ $btn-hover-bg: #c71007;
 .parent-container {
     max-width: $section-max-width;
     padding: 0 $section-universal-padding;
+    margin: 0 auto;
 
     .contact {
         border-radius: 10px;
