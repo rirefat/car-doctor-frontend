@@ -3,12 +3,13 @@ import './Cart.css'
 import { AuthContext } from '../../Contexts/UserContext';
 
 const Cart = () => {
-    // const { user } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
+    // const [cart, setCart] = useState([]);
 
     // useEffect(() => {
-    //     fetch(`http://localhost:5000/cart?email=${user?.email}`)
+    //     fetch(`http://localhost:5000/cart?email=${user.email}`)
     //         .then(res => res.json())
-    //         .then(data => console.log(data))
+    //         .then(data => setCart(data))
     // }, []);
 
     return (

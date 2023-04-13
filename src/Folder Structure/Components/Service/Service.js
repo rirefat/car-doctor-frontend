@@ -14,25 +14,24 @@ const Service = (props) => {
 
     const addToCart = (id) => {
         if (user?.email) {
-            const _id = id;
+            const product = id;
             const product_name = name;
             const product_img = img;
             const product_price = price;
             const order_email = user?.email;
-            const qty = 1;
-            const data = { _id, product_name, product_img, product_price, order_email, qty }
+            const data = { product, product_name, product_img, product_price, order_email };
 
-            fetch('http://localhost:5000/cart', {
+            fetch('http://localhost:5000/cart',{
                 method: "POST",
                 headers: {
-                    "content-type": "application/json"
+                    "Content-type": "application/json"
                 },
                 body: JSON.stringify(data)
             })
-                .then(res => res.json())
-                .then(data => {
-                    notify();
-                })
+            .then(res=>res.json())
+            .then(data=>{
+                notify();
+            })
         }
         else {
             navigate('/login');
