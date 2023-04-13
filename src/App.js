@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className='app'>
       <RouterProvider router={router} />
-      <ScrollToTop smooth />
+      <ScrollToTop smooth width={"auto"}/>
     </div>
   );
 };

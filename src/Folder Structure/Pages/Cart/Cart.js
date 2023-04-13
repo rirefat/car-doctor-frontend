@@ -9,12 +9,28 @@ import { RiArrowGoBackFill } from 'react-icons/ri';
 const Cart = () => {
     const { user } = useContext(AuthContext);
     const [cart, setCart] = useState([]);
+    // const [displayedItems, setDisplayedItems] = useState([]);
 
     useEffect(() => {
         fetch(`http://localhost:5000/cart?email=${user.email}`)
             .then(res => res.json())
             .then(data => setCart(data))
     }, []);
+
+    const cartDltOne=(id)=>{
+        fetch(`http://localhost:5000/cart/${id}`,{
+            method:"DELETE",
+            headers:{
+                "Content-type":"application/json"
+            }
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            const displayedItems = cart.filter(item=> item._id !== id);
+            setCart(displayedItems);
+            console.log(data)
+        })
+    }
 
     return (
         <div className='cart-page'>
@@ -49,7 +65,7 @@ const Cart = () => {
                                     </td>
                                     <th className='flex justify-end'>
                                         <div className="btn btn-sm btn-outline btn-success ml-4">Confirm</div>
-                                        <div className="btn btn-sm btn-outline border-primary-color text-primary-color hover:border-transparent hover:bg-primary-color hover:text-white ml-4">Remove</div>
+                                        <div onClick={()=>cartDltOne(item._id)} className="btn btn-sm btn-outline border-primary-color text-primary-color hover:border-transparent hover:bg-primary-color hover:text-white ml-4">Remove</div>
                                     </th>
                                 </tr>
                             </tbody>
