@@ -30,4 +30,8 @@
   position: absolute;
   top: 2.6rem !important;
   right: -2.5rem;
+}
+
+.indicator-item {
+  right: 8px !important;
 }/*# sourceMappingURL=Navbar.css.map */

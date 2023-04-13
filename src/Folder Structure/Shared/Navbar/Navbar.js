@@ -9,6 +9,7 @@ import { AuthContext } from '../../Contexts/UserContext';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
+
     const navLinks =
         <>
             <li><Link to="/home">Home</Link></li>
@@ -48,6 +49,14 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 <Link className='navbar-icon' to={'/cart'}><BsHandbag></BsHandbag></Link>
+                {/* {
+                    (cart.length > 0) ?
+                        <div className="indicator mr-5">
+                            <Link className='navbar-icon' to={'/cart'}><BsHandbag></BsHandbag></Link>
+                            <span className="indicator-item badge bg-primary-color border-transparent">{cart.length}</span>
+                        </div> :
+                        <Link className='navbar-icon' to={'/cart'}><BsHandbag></BsHandbag></Link>
+                } */}
                 {
                     (user?.uid) ?
                         <div className="dropdown dropdown-end">

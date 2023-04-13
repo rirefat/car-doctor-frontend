@@ -5,39 +5,40 @@ import app from '../../firebase.config';
 
 export const AuthContext = createContext();
 
-const UserContext = ({children}) => {  
-    const auth = getAuth(app); 
+const UserContext = ({ children }) => {
+    const auth = getAuth(app);
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const googleProvider = new GoogleAuthProvider();
 
-    const createUserByEmail =(email, pass)=>{
+    const createUserByEmail = (email, pass) => {
         return createUserWithEmailAndPassword(auth, email, pass)
     }
 
-    const googleReg =()=>{
+    const googleReg = () => {
         return signInWithPopup(auth, googleProvider);
     }
 
-    const login =(email, password)=>{
+    const login = (email, password) => {
         setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
-    const logOut =()=>{
+    const logOut = () => {
         return signOut(auth);
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         const subscribe = onAuthStateChanged(auth, currentUser => {
             console.log(currentUser);
             setUser(currentUser);
             setLoading(false);
         });
-        return ()=> subscribe();
-    },[]);
+        return () => subscribe();
+    }, []);
 
-    const AuthInfo = {user, loading, createUserByEmail, googleReg, login, logOut}
+
+    const AuthInfo = { user, loading, createUserByEmail, googleReg, login, logOut }
 
     return (
         <AuthContext.Provider value={AuthInfo}>
