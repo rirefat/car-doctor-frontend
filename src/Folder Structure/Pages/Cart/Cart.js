@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 import { BsTrash } from 'react-icons/bs';
 import { RiArrowGoBackFill } from 'react-icons/ri';
 
+import emptyCart from '../../../assets/images/empty-cart.svg'
+
 const Cart = () => {
     const { user } = useContext(AuthContext);
     const [cart, setCart] = useState([]);
@@ -17,19 +19,32 @@ const Cart = () => {
             .then(data => setCart(data))
     }, []);
 
-    const cartDltOne=(id)=>{
-        fetch(`http://localhost:5000/cart/${id}`,{
-            method:"DELETE",
-            headers:{
-                "Content-type":"application/json"
+    const cartDltOne = (id) => {
+        fetch(`http://localhost:5000/cart/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-type": "application/json"
             }
         })
-        .then(res=>res.json())
-        .then(data=>{
-            const displayedItems = cart.filter(item=> item._id !== id);
-            setCart(displayedItems);
-            console.log(data)
+            .then(res => res.json())
+            .then(data => {
+                const displayedItems = cart.filter(item => item._id !== id);
+                setCart(displayedItems);
+                console.log(data)
+            })
+    }
+
+    const clearCart = (email) => {
+        fetch(`http://localhost:5000/cart?email=${email}`, {
+            method: "DELETE",
+            headers: {
+                "Content-type": "application/json"
+            }
         })
+            .then(res => res.json())
+            .then(data => {
+                setCart([]);
+            })
     }
 
     return (
@@ -39,7 +54,8 @@ const Cart = () => {
                 subtitle={user.displayName}
             ></TopBanner>
             <div className="cart-container mt-10">
-                {
+                {cart.length > 0 ?
+
                     cart.map(item => <div key={item._id}>
                         <table className="table w-full ">
                             <tbody className=''>
@@ -48,7 +64,7 @@ const Cart = () => {
                                         <div className="flex items-center space-x-3">
                                             <div className="avatar">
                                                 <div className="mask mask-squircle w-12 h-12">
-                                                    <img src={item.product_img} alt="Avatar Tailwind CSS Component" />
+                                                    <img src={item.product_img} alt="img" />
                                                 </div>
                                             </div>
                                             <div>
@@ -65,12 +81,16 @@ const Cart = () => {
                                     </td>
                                     <th className='flex justify-end'>
                                         <div className="btn btn-sm btn-outline btn-success ml-4">Confirm</div>
-                                        <div onClick={()=>cartDltOne(item._id)} className="btn btn-sm btn-outline border-primary-color text-primary-color hover:border-transparent hover:bg-primary-color hover:text-white ml-4">Remove</div>
+                                        <div onClick={() => cartDltOne(item._id)} className="btn btn-sm btn-outline border-primary-color text-primary-color hover:border-transparent hover:bg-primary-color hover:text-white ml-4">Remove</div>
                                     </th>
                                 </tr>
                             </tbody>
                         </table>
                     </div>)
+                    :
+                    <div className="flex items-center justify-center">
+                        <img src={emptyCart} alt="img" className='w-1/4' />
+                    </div>
                 }
 
                 <div className="action-section mt-10 flex items-center justify-between">
@@ -78,10 +98,14 @@ const Cart = () => {
                         <span className="icon mx-2"><RiArrowGoBackFill></RiArrowGoBackFill></span>
                         Continue Shopping
                     </Link>
-                    <Link className="clear-cart flex items-center hover:text-primary-color">
-                        <span className='icon mx-2'><BsTrash></BsTrash></span>
-                        Clear Cart
-                    </Link>
+                    {
+                        (cart.length > 0 ?
+                            <Link onClick={() => clearCart(user.email)} className="clear-cart flex items-center hover:text-primary-color">
+                                <span className='icon mx-2'><BsTrash></BsTrash></span>
+                                Clear Cart
+                            </Link> : ""
+                        )
+                    }
                 </div>
             </div>
         </div>
