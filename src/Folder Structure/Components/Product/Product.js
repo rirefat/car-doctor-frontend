@@ -18,7 +18,8 @@ const Product = (props) => {
             const product_img = img;
             const product_price = price;
             const order_email = user?.email;
-            const data = { product, product_name, product_img, product_price, order_email };
+            const type = 'Product';
+            const data = { product, product_name, product_img, product_price, order_email, type };
 
             fetch('http://localhost:5000/cart',{
                 method: "POST",

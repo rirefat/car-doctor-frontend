@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Navbar.css'
 import logo from '../../../assets/logo.svg';
 import userImg from '../../../assets/images/User-Profile-PNG.png';
@@ -9,6 +9,13 @@ import { AuthContext } from '../../Contexts/UserContext';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
+    const [cart, setCart] = useState([]);
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/cart?email=${user?.email}`)
+            .then(res => res.json())
+            .then(data => setCart(data))
+    }, []);
 
     const navLinks =
         <>
@@ -53,7 +60,7 @@ const Navbar = () => {
                     (cart.length > 0) ?
                         <div className="indicator mr-5">
                             <Link className='navbar-icon' to={'/cart'}><BsHandbag></BsHandbag></Link>
-                            <span className="indicator-item badge bg-primary-color border-transparent">{cart.length}</span>
+                            <span className="indicator-item badge badge-secondary"></span> 
                         </div> :
                         <Link className='navbar-icon' to={'/cart'}><BsHandbag></BsHandbag></Link>
                 } */}
@@ -70,7 +77,7 @@ const Navbar = () => {
                                 <li>
                                     <Link to={'/user-profile'} className="justify-between">Profile</Link>
                                 </li>
-                                <li><Link to={'/cart'}>Cart</Link></li>
+                                <li><Link to={'/cart'}>Cart {cart.length>0 ? <span className="indicator-item badge badge-secondary bg-primary-color hover:text-primary-color">{cart?.length}</span>: ""} </Link></li>
                                 <li><Link to={'/orders'}>Orders</Link></li>
                                 <li>
                                     <Link onClick={handleLogOut}>Log Out</Link>
