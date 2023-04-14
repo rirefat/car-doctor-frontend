@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './ServiceDetails.css';
 import TopBanner from '../../Shared/TopBanner/TopBanner';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 
 import { BsFiletypeDoc, BsFillCloudArrowDownFill,BsArrowRight } from 'react-icons/bs';
 
@@ -11,8 +11,12 @@ import logoLight from '../../../assets/logo-light-141.svg';
 import step1 from '../../../assets/icons/step-1.svg'
 import step2 from '../../../assets/icons/step-2.svg'
 import step3 from '../../../assets/icons/step-3.svg'
+import { AuthContext } from '../../Contexts/UserContext';
 
 const ServiceDetails = () => {
+    const {user} = useContext(AuthContext);
+    const navigate = useNavigate();
+
     const serviceFeatures = [
         {
             id: 1,
@@ -42,15 +46,6 @@ const ServiceDetails = () => {
         { id: 3, icon: step3, title: "STEP 3", desc: "It uses a dictionary of over 200." },
     ];
 
-    const services =[
-        { id: 1, title: "Engine Repair"},
-        { id: 2, title: "Engine Repair"},
-        { id: 3, title: "Engine Repair"},
-        { id: 4, title: "Engine Repair"},
-        { id: 5, title: "Engine Repair"},
-        { id: 6, title: "Engine Repair"},
-    ];
-
     const [availableServices, setAvailableServices]=useState([]);
     useEffect(()=>{
         fetch("http://localhost:5000/services")
@@ -59,6 +54,33 @@ const ServiceDetails = () => {
     },[]);
 
     const singleService= useLoaderData();
+
+    const addToCart = (id) => {
+        if (user?.email) {
+            const product = id;
+            const product_name = singleService.name;
+            const product_img = singleService.img;
+            const product_price = singleService.price;
+            const order_email = user?.email;
+            const type = 'Service';
+            const data = { product, product_name, product_img, product_price, order_email, type };
+
+            fetch('http://localhost:5000/cart',{
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+            .then(res=>res.json())
+            .then(data=>{
+                navigate('/');
+            })
+        }
+        else {
+            navigate('/login');
+        }
+    }
 
     return (
         <div className='service-details'>
@@ -170,7 +192,7 @@ const ServiceDetails = () => {
 
                     <div className="mb-5 checkout">
                         <h3 className='text-3xl font-semibold mb-4'>Price: ${singleService.price}</h3>
-                        <Link to={'/checkout'}><button className="btn checkout-btn shadow-md w-full">Proceed Checkout</button></Link>
+                        <Link onClick={()=>addToCart(`${singleService._id}`)}><button className="btn checkout-btn shadow-md w-full">Add To Cart</button></Link>
                     </div>
                 </div>
             </div>

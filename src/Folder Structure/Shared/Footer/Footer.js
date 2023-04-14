@@ -23,7 +23,7 @@ const Footer = () => {
                 <div>
                     <span className="footer_title text-lg font-semibold text-lg">About</span>
                     <Link to={'/home'} className="link link-hover text-base">Home</Link>
-                    <Link to={'/service'} className="link link-hover text-base">Service</Link>
+                    <Link to={'/services'} className="link link-hover text-base">Service</Link>
                     <Link to={'/contact'} className="link link-hover text-base">Contact</Link>
                 </div>
                 <div>
