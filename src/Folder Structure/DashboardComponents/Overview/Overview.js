@@ -12,7 +12,7 @@ const Overview = () => {
     const [services, setServices] = useState([]);
     const [products, setProducts] = useState([]);
     const [team, setTeam] = useState([]);
-    const [cart, setCart] = useState([]);
+    const [orders, setOrders] = useState([]);
 
     useEffect(() => {
         fetch('http://localhost:5000/services')
@@ -25,6 +25,11 @@ const Overview = () => {
             .then(data => setProducts(data))
     }, []);
     useEffect(() => {
+        fetch('http://localhost:5000/orders')
+            .then(res => res.json())
+            .then(data => setOrders(data))
+    }, []);
+    useEffect(() => {
         fetch('http://localhost:5000/team')
             .then(res => res.json())
             .then(data => setTeam(data))
@@ -34,7 +39,7 @@ const Overview = () => {
         { id: 1, icon: productsIcon, name: "Total Products", info: products.length },
         { id: 2, icon: servicesIcon, name: "All Services", info: services.length },
         { id: 3, icon: manPowerIcon, name: "Manpower", info: team.length },
-        { id: 4, icon: ordersIcon, name: "Orders", info: 10 },
+        { id: 4, icon: ordersIcon, name: "Orders", info: orders.length },
     ];
 
     return (

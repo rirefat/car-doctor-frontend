@@ -67,16 +67,20 @@ const router = createBrowserRouter([
                 element: <Manpower></Manpower>,
                 loader: () => fetch("http://localhost:5000/team")
             },
-            { path: '/admin-dashboard/orders', element: <Orders></Orders> },
+            {
+                path: '/admin-dashboard/orders',
+                element: <Orders></Orders>,
+                loader: ()=> fetch("http://localhost:5000/orders")
+            },
             {
                 path: '/admin-dashboard/update-product/:id',
                 element: <UpdateProduct></UpdateProduct>,
-                loader: ({params})=> fetch(`http://localhost:5000/products/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
             },
             {
                 path: '/admin-dashboard/update-service/:id',
                 element: <UpdateService></UpdateService>,
-                loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
             },
         ]
     },
