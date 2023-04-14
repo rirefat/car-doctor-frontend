@@ -21,7 +21,7 @@ const Order = () => {
                 subtitle={user.displayName}
             ></TopBanner>
 
-            <div className="order-container mt-10">
+            <div className="order-container my-10">
                 {
                     orders.map(order => <div>
                         <table className="table w-full ">

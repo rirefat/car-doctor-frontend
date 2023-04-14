@@ -11,6 +11,8 @@ const UserContext = ({ children }) => {
     const [loading, setLoading] = useState(true);
     const googleProvider = new GoogleAuthProvider();
 
+    const adminMail = "rirefat24@gmail.com";
+
     const createUserByEmail = (email, pass) => {
         return createUserWithEmailAndPassword(auth, email, pass)
     }
@@ -38,7 +40,7 @@ const UserContext = ({ children }) => {
     }, []);
 
 
-    const AuthInfo = { user, loading, createUserByEmail, googleReg, login, logOut }
+    const AuthInfo = { user, adminMail, loading, createUserByEmail, googleReg, login, logOut }
 
     return (
         <AuthContext.Provider value={AuthInfo}>

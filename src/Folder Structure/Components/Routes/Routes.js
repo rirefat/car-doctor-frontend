@@ -22,6 +22,7 @@ import UpdateProduct from "../../DashboardComponents/UpdateProduct/UpdateProduct
 import UpdateService from "../../DashboardComponents/UpdateService/UpdateService";
 import PrivateRoute from "./PrivateRoute";
 import Order from "../../Pages/Order/Order";
+import AdminRoute from "./AdminRoute";
 
 const router = createBrowserRouter([
     {
@@ -49,7 +50,7 @@ const router = createBrowserRouter([
     { path: '/login', element: <Login></Login> },
     {
         path: '/admin-dashboard',
-        element: <AdminDashboard></AdminDashboard>,
+        element: <AdminRoute><AdminDashboard></AdminDashboard></AdminRoute>,
         children: [
             { path: '/admin-dashboard/', element: <Overview></Overview> },
             {

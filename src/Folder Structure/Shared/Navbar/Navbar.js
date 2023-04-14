@@ -78,7 +78,7 @@ const Navbar = () => {
                                     <Link to={'/user-profile'} className="justify-between">Profile</Link>
                                 </li>
                                 <li><Link to={'/cart'}>Cart {cart.length>0 ? <span className="indicator-item badge badge-secondary bg-primary-color hover:text-primary-color">{cart?.length}</span>: ""} </Link></li>
-                                <li><Link to={'/orders'}>Orders</Link></li>
+                                <li><Link to={'/order'}>Orders</Link></li>
                                 <li>
                                     <Link onClick={handleLogOut}>Log Out</Link>
                                 </li>
