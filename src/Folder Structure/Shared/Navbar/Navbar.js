@@ -4,11 +4,12 @@ import logo from '../../../assets/logo.svg';
 import userImg from '../../../assets/images/User-Profile-PNG.png';
 import { Link } from 'react-router-dom';
 import { BsHandbag, BsSearch } from 'react-icons/bs';
+import { RiVipCrown2Fill } from 'react-icons/ri';
 import { AuthContext } from '../../Contexts/UserContext';
 
 
 const Navbar = () => {
-    const { user, logOut } = useContext(AuthContext);
+    const { user, adminMail, logOut } = useContext(AuthContext);
     const [cart, setCart] = useState([]);
 
     useEffect(() => {
@@ -74,9 +75,12 @@ const Navbar = () => {
                             </label>
                             <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                                 <li><span className='text-primary-color font-semibold'>Welcome {user?.displayName}</span></li>
-                                <li>
-                                    <Link to={'/user-profile'} className="justify-between">Profile</Link>
-                                </li>
+                                <li><Link to={'/user-profile'} className="justify-between">Profile</Link></li>
+                                {
+                                    (user.email===adminMail)?<li><Link to={'/admin-dashboard'} className="justify-start">Admin Panel<span className='text-amber-600 text-lg'><RiVipCrown2Fill></RiVipCrown2Fill></span></Link></li>:null
+                                }
+                                
+
                                 <li><Link to={'/cart'}>Cart {cart.length>0 ? <span className="indicator-item badge badge-secondary bg-primary-color hover:text-primary-color">{cart?.length}</span>: ""} </Link></li>
                                 <li><Link to={'/order'}>Orders</Link></li>
                                 <li>

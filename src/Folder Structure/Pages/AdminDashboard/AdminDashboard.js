@@ -1,6 +1,6 @@
 import './AdminDashboard.css'
 import TopBanner from '../../Shared/TopBanner/TopBanner';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 import logo from '../../../assets/logo.svg';
 
 import { BsFillBoxSeamFill, BsWrenchAdjustable } from 'react-icons/bs';
@@ -8,8 +8,22 @@ import { RiTeamFill } from 'react-icons/ri';
 import { FiLogOut } from 'react-icons/fi';
 import { GrOverview } from 'react-icons/gr';
 import { HiShoppingCart } from 'react-icons/hi';
+import { useContext } from 'react';
+import { AuthContext } from '../../Contexts/UserContext';
 
 const AdminDashboard = () => {
+    const {user, logOut} = useContext(AuthContext);
+    const navigate = useNavigate();
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+                console.log("logout");
+                navigate('/');
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    }
 
     return (
         <div className='admin-dashboard'>
@@ -41,7 +55,7 @@ const AdminDashboard = () => {
                             </div>
                             <h2 className='text-center font-semibold'>Admin</h2>
                             <p className='text-center'>Rafiul Islam</p>
-                            <button className='btn btn-circle bg-slate-500 my-6' title='Logout'><FiLogOut></FiLogOut></button>
+                            <button onClick={handleLogOut} className='btn btn-circle bg-slate-500 my-6' title='Logout'><FiLogOut></FiLogOut></button>
                         </div>
                     </div>
                 </div>
