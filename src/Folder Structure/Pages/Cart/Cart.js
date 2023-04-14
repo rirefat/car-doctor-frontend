@@ -4,14 +4,13 @@ import { AuthContext } from '../../Contexts/UserContext';
 import TopBanner from '../../Shared/TopBanner/TopBanner';
 import { Link } from 'react-router-dom';
 import { BsTrash } from 'react-icons/bs';
-import { RiArrowGoBackFill } from 'react-icons/ri';
+import { RiArrowGoBackFill, RiArrowGoForwardLine } from 'react-icons/ri';
 
 import emptyCart from '../../../assets/images/empty-cart.svg'
 
 const Cart = () => {
     const { user } = useContext(AuthContext);
     const [cart, setCart] = useState([]);
-    // const [displayedItems, setDisplayedItems] = useState([]);
 
     useEffect(() => {
         fetch(`http://localhost:5000/cart?email=${user.email}`)
@@ -20,13 +19,13 @@ const Cart = () => {
     }, []);
 
     const confirmOrder = (item) => {
-        const {_id, product_name , product_img, product_price, order_email, type} = item;
-        const orderData = {product_name , product_img, product_price, order_email, type};
+        const { _id, product_name, product_img, product_price, order_email, type } = item;
+        const orderData = { product_name, product_img, product_price, order_email, type };
         console.log(orderData)
-        fetch('http://localhost:5000/orders',{
+        fetch('http://localhost:5000/orders', {
             method: "POST",
-            headers:{
-                'content-type':"application/json"
+            headers: {
+                'content-type': "application/json"
             },
             body: JSON.stringify(orderData)
         })
@@ -112,10 +111,16 @@ const Cart = () => {
                 }
 
                 <div className="action-section mt-10 flex items-center justify-between">
-                    <Link to={'/services'} className="continue-shopping flex items-center hover:text-primary-color">
-                        <span className="icon mx-2"><RiArrowGoBackFill></RiArrowGoBackFill></span>
-                        Continue Shopping
-                    </Link>
+                    <div className='flex gap-5'>
+                        <Link to={'/services'} className="continue-shopping flex items-center hover:text-primary-color">
+                            <span className="icon mx-2"><RiArrowGoBackFill></RiArrowGoBackFill></span>
+                            Continue Shopping
+                        </Link>
+                        <Link to={'/order'} className="continue-shopping flex items-center hover:text-primary-color">
+                            Manage Orders
+                            <span className="icon mx-2"><RiArrowGoForwardLine></RiArrowGoForwardLine></span>
+                        </Link>
+                    </div>
                     {
                         (cart.length > 0 ?
                             <Link onClick={() => clearCart(user.email)} className="clear-cart flex items-center hover:text-primary-color">

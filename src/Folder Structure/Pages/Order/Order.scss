@@ -1,0 +1,16 @@
+$primary-color: #FF3811;
+$text-primary: #151515;
+$text-secondary: #737373;
+$text-white: #fff;
+$text-2: #A2A2A2;
+$section-max-width: 1440px;
+$section-universal-padding: 9.375rem;
+$font-family-primary: Inter, sans-serif;
+$btn-hover-bg:#c71007;
+$border-basic: 1px solid #c8c8c8;
+
+.manage-order-page{
+    max-width: $section-max-width;
+    margin: 0 auto;
+    padding: 0 $section-universal-padding;
+}

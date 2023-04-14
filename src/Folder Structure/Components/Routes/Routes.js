@@ -21,6 +21,7 @@ import Orders from "../../DashboardComponents/Orders/Orders";
 import UpdateProduct from "../../DashboardComponents/UpdateProduct/UpdateProduct";
 import UpdateService from "../../DashboardComponents/UpdateService/UpdateService";
 import PrivateRoute from "./PrivateRoute";
+import Order from "../../Pages/Order/Order";
 
 const router = createBrowserRouter([
     {
@@ -39,6 +40,7 @@ const router = createBrowserRouter([
             { path: '/contact', element: <Contact></Contact> },
             { path: '/checkout', element: <CheckOut></CheckOut> },
             { path: '/cart', element: <PrivateRoute><Cart></Cart></PrivateRoute> },
+            { path: '/order', element: <PrivateRoute><Order></Order></PrivateRoute> },
             { path: '/add-service', element: <AddService></AddService> },
             { path: '/add-product', element: <AddProduct></AddProduct> },
         ]
