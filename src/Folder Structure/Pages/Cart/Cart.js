@@ -19,6 +19,23 @@ const Cart = () => {
             .then(data => setCart(data))
     }, []);
 
+    const confirmOrder = (item) => {
+        const {_id, product_name , product_img, product_price, order_email, type} = item;
+        const orderData = {product_name , product_img, product_price, order_email, type};
+        console.log(orderData)
+        fetch('http://localhost:5000/orders',{
+            method: "POST",
+            headers:{
+                'content-type':"application/json"
+            },
+            body: JSON.stringify(orderData)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+            })
+    }
+
     const cartDltOne = (id) => {
         fetch(`http://localhost:5000/cart/${id}`, {
             method: "DELETE",
@@ -80,7 +97,7 @@ const Cart = () => {
                                         <Link to={`/${item.type}-details/${item._id}`}><button className="btn btn-ghost btn-xs">details</button></Link>
                                     </td>
                                     <th className='flex justify-end'>
-                                        <div className="btn btn-sm btn-outline btn-success ml-4">Confirm</div>
+                                        <div onClick={() => confirmOrder(item)} className="btn btn-sm btn-outline btn-success ml-4">Confirm</div>
                                         <div onClick={() => cartDltOne(item._id)} className="btn btn-sm btn-outline border-primary-color text-primary-color hover:border-transparent hover:bg-primary-color hover:text-white ml-4">Remove</div>
                                     </th>
                                 </tr>
